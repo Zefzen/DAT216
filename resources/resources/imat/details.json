@@ -1,0 +1,1073 @@
+[
+  {
+    "productId": 1,
+    "brand" : "Findus",
+    "description" : "Ärter innehåller fibrer, protein och C-vitaminer som hjälper till att göra varje måltid hälsosammare",
+    "contents" : "Ärter. Klimatcertifierad Svenskt Sigill-råvara",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 2,
+    "brand" : "Zeta",
+    "description" : "Kikärtor är goda i soppor, sallader, grytor, pastarätter, mixade i en hummus eller som de är, med olivolja och lite vinäger",
+    "contents" : "Ekologiska kikärtor, vatten, salt",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 3,
+    "brand" : "Risenta",
+    "description" : "Bruna Linser som kan användas i bl.a. grytor, soppor, gratänger och vegetariska biffar",
+    "contents" : "Bruna linser",
+    "origin" : "Turkiet"
+  },
+  {
+    "productId": 4,
+    "brand" : "Zeta",
+    "description" : "Smakrik, nötig karaktär och fast konsistens. Perfekta som en matig grund i sallader, kryddiga soppor mm",
+    "contents" : "Gröna linser, vatten, salt, antioxidationsmedel E300, konsistensmedel E509",
+    "origin" : "Turkiet"
+  },
+  {
+    "productId": 5,
+    "brand" : "Zeta",
+    "description" : "Små, runda och ekologiska röda linser med mild smak. Linser innehåller en mängd bra saker, som järn och mineraler",
+    "contents" : "Hela röda linser. Kan innehålla spår av gluten, sojabönor, selleri, sesamfrön, sulfit",
+    "origin" : "Turkiet"
+  },
+  {
+    "productId": 6,
+    "brand" : "Zeta",
+    "description" : "Bönor rika på protein och fibrer. Smaken är söt och konsistensen len och krämig",
+    "contents" : "Kidneybönor",
+    "origin" : "Kina"
+  },
+  {
+    "productId": 7,
+    "brand" : "iMat",
+    "description" : "Vita bönor är ett klimatsmartare val till kött och fisk eftersom de är rika på proteiner",
+    "contents" : "Svenskodlade små vita bönor, vatten, salt, antioxidationsmedel (E300)",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 8,
+    "brand" : "Pågen",
+    "description" : "Ett rustikt och saftigt hantverksbröd fyllt med smak",
+    "contents" : "Vatten, vetemjöl, rågmjöl, sirap, surdeg på råg och vete, solrosfrö, ölmalt, rapsolja, lakrits, jäst",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 9,
+    "brand" : "Pågen",
+    "description" : "En saftig stenugnsbakad limpa som är naturligt smakrik utan några tillsatta brödkryddor",
+    "contents" : "Vetemjöl, rågmjöl, vatten, vetegluten, rapsolja, sirap, malt av korn, jäst, salt, mjölbehandlingsmedel (askorbinsyra)",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 10,
+    "brand" : "iMat",
+    "description" : "Frasig fralla för alla tillfällen",
+    "contents" : "Vetemjöl, vatten, jäst, joderat salt, mjölbehandlingsmedel (E300). Kan innehålla spår av sesamfrön",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 11,
+    "brand" : "Wasa",
+    "description" : "Ett milt och sprött knäckebröd med vallmofrön. Det är ett ljust knäckebröd, rikt på både fibrer och protein",
+    "contents" : "Vetemjöl, vatten, jäst, socker, salt, vallmofrön",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 12,
+    "brand" : "Pågen",
+    "description" : "Brödet för dig som verkligen älskar att rosta. Frasigt och gott med solmoget vete",
+    "contents" : "Vetemjöl, vatten, vetegluten, rapsolja, sirap, malt av korn, jäst, salt, mjölbehandlingsmedel (askorbinsyra)",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 13,
+    "brand" : "Polarbröd",
+    "description" : "Ett hårt tunnbröd och passar att äta till vad som helst, när som helst. Ät den med ett pålägg eller servera brödet till surströmming",
+    "contents" : "Vetemjöl, fullkorn av vete, bakpulver (hjorthornssalt), vatten, salt, rapsolja, jäst. Mjölkfri",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 14,
+    "brand" : "Pågen",
+    "description" : "Ett rejält och mättande vörtbröd för alla tillfällen",
+    "contents" : "Vatten, vetemjöl, rågmjöl, sirap, surdeg på råg och vete, solrosfrö, ölmalt, rapsolja, lakrits, jäst",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 15,
+    "brand" : "iMat",
+    "description" : "Härligt sötsyrliga med aromatisk smak. Särskilt goda tillsammans med hallon, i allt från desserter till sylt och saft",
+    "contents" : "Björnbär klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 16,
+    "brand" : "iMat",
+    "description" : "Små söta smakbomber från våra svenska skogar. Perfekta både i bakning, desserter, smoothie och paj",
+    "contents" : "Blåbär klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 17,
+    "brand" : "iMat",
+    "description" : "Hallon är sötsyrliga och ger en härlig känsla av sommar. Toppen att använda i desserter eller på gröten på morgonen",
+    "contents" : "Hallon klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 18,
+    "brand" : "iMat",
+    "description" : "Dessa ”stickebär” som man ibland säger tillhör de klassiska svenska trädgårdsbären",
+    "contents" : "Krusbär klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 19,
+    "brand" : "iMat",
+    "description" : "Röda vinbär är en bärbuske som mognar under sensommaren. De härligt röda bären växer i klasar och är både intensiva och en aning sura",
+    "contents" : "Röda vinbär klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 20,
+    "brand" : "iMat",
+    "description" : "Röda vinbär är en bärbuske som mognar under sensommaren. De härligt röda bären växer i klasar och är både intensiva och en aning sura",
+    "contents" : "Röda vinbär klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 21,
+    "brand" : "iMat",
+    "description" : "Svarta vinbär är sötsyrliga och goda vinbär. Härlig smak av sommar hela året",
+    "contents" : "Svarta vinbär klass 1",
+    "origin" : "Bulgarien"
+  },
+  {
+    "productId": 22,
+    "brand" : "iMat",
+    "description" : "Saftiga och söta med en frisk syrlighet. Skalet visar inte hur mogen frukten är, en grön apelsin kan vara lika söt som en orange",
+    "contents" : "Apelsin klass 1",
+    "origin" : "Sydafrika"
+  },
+  {
+    "productId": 23,
+    "brand" : "iMat",
+    "description" : "Citron passar som smaksättare till bland annat fisk, i såser, dressingar, desserter, glass och bakverk",
+    "contents" : "Citron klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 24,
+    "brand" : "iMat",
+    "description" : "Söt och uppfriskande saftig liten citrus med intensiv smak. Clementinen är både lättskalad och nästan kärnfri",
+    "contents" : "Clementin klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 25,
+    "brand" : "iMat",
+    "description" : "Härligt uppfriskande i alla lägen",
+    "contents" : "Grafrukt klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 26,
+    "brand" : "iMat",
+    "description" : "Lime är en släkting till citronen och passar som smaksättare i mat, särskilt till fisk och skaldjur",
+    "contents" : "Lime klass 1",
+    "origin" : "Brasilien"
+  },
+  {
+    "productId": 27,
+    "brand" : "Fazer",
+    "description" : "Ett klassiskt kakaopulver för många genom sina välkända ögon. Perfekt till bakning när du ska göra bakverk och efterrätter",
+    "contents" : "Kakaopulver, surhetsreglerandemedel (kaliumkarbonat)",
+    "origin" : "Nederländerna"
+  },
+  {
+    "productId": 28,
+    "brand" : "Twinings",
+    "description" : "Ett svart ekologiskt odlat te med den klassiska smaksättningen av ekologiskt odlad Bergamott",
+    "contents" : "Ekologiskt svart te med bergamottarom (2%)",
+    "origin" : "Afrika/Asien/Sydamerika"
+  },
+  {
+    "productId": 29,
+    "brand" : "Kung Markatta",
+    "description" : "Grönt naturellt te med välbalanserad smak. Grönt te sägs innehålla rikligt med antioxidanter och är känt för sina välgörande egenskaper",
+    "contents" : "Grönt te, ekologiskt och handlat i enlighet med Fairtrade-kriterierna, totalt 100 %",
+    "origin" : "Afrika/Asien/Sydamerika"
+  },
+  {
+    "productId": 30,
+    "brand" : "Gevalia",
+    "description" : "En perfekt blandning av utvalda bönor från Östafrika och Sydamerika, som ger ett välbalanserat kaffe med härlig arom",
+    "contents" : "100% Arabicakaffe. Rostat och malet",
+    "origin" : "Östafrika, Sydamerika"
+  },
+  {
+    "productId": 31,
+    "brand" : "Lipton",
+    "description" : "Rooibos kan med fördel avnjutas på kvällen då det är koffeinfritt, samt har en härligt exotisk smak av ingefära, kardemumma och kanel",
+    "contents" : "Rooibos 93%, arom, hibiskus 1%",
+    "origin" : "Ospecificerat"
+  },
+  {
+    "productId": 32,
+    "brand" : "Tropicana",
+    "description" : "Av solmogna, handplockade apelsiner. Perfekt till frukosten",
+    "contents" : "100% Apelsinjuice med fruktkött",
+    "origin" : "USA"
+  },
+  {
+    "productId": 33,
+    "brand" : "Coca-Cola",
+    "description" : "Coca-Cola har en lång historia och har varit en uppskattad dryck världen över sedan den skapades av apotekaren Dr. John Pemberton i Atlanta i USA 1886",
+    "contents" : "Kolsyrat vatten, socker, färgämne (E150d), syra (E338), naturliga aromer, arom koffein",
+    "origin" : "USA"
+  },
+  {
+    "productId": 34,
+    "brand" : "Coca-Cola",
+    "description" : "Coca-Cola har en lång historia och har varit en uppskattad dryck världen över sedan den skapades av apotekaren Dr. John Pemberton i Atlanta i USA 1886",
+    "contents" : "Kolsyrat vatten, socker, färgämne (E150d), syra (E338), naturliga aromer, arom koffein",
+    "origin" : "USA"
+  },
+  {
+    "productId": 35,
+    "brand" : "Fanta",
+    "description" : "En kolsyrad läskedryck med smak av apelsin. Finns i flera olika förpackningar & passar perfekt för att släcka törsten till mellanmålet, snacksen eller till maten",
+    "contents" : "Kolsyrat vatten, sackaros, apelsinjuice (5%), syror (E 330, E 296), naturlig apelsinarom, andra naturliga aromer, sötningsmedel (acesulfam K, aspartam), stabiliseringsmedel",
+    "origin" : "USA"
+  },
+  {
+    "productId": 36,
+    "brand" : "Fanta",
+    "description" : "En kolsyrad läskedryck med smak av apelsin. Finns i flera olika förpackningar & passar perfekt för att släcka törsten till mellanmålet, snacksen eller till maten",
+    "contents" : "Kolsyrat vatten, sackaros, apelsinjuice (5%), syror (E 330, E 296), naturlig apelsinarom, andra naturliga aromer, sötningsmedel (acesulfam K, aspartam), stabiliseringsmedel",
+    "origin" : "USA"
+  },
+  {
+    "productId": 37,
+    "brand" : "Ekströms",
+    "description" : "Klassisk fruktsoppa rik på C-vitamin och lika uppskattad hemma som på utflykten",
+    "contents" : "Vatten, socker, äppeljuice, aprikospuré, förtjockningsmedel, äppelpuré, katrinplommonpuré, syra (citronsyra), vitamin C, naturlig arom. Innehåller 18,5% frukt och 9,5% tillsatt socker",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 38,
+    "brand" : "7-up",
+    "description" : "En krispig läsk och törstsläckare med en uppfriskande smak av citron och lime",
+    "contents" : "Kolsyrat vatten, socker, syror (citronsyra, äppelsyra), naturlig citron- och limearom med andra naturliga aromer, surhetsreglerande medel(natriumcitrat), sötningsmedel",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 39,
+    "brand" : "7-up",
+    "description" : "En krispig läsk och törstsläckare med en uppfriskande smak av citron och lime",
+    "contents" : "Kolsyrat vatten, socker, syror (citronsyra, äppelsyra), naturlig citron- och limearom med andra naturliga aromer, surhetsreglerande medel(natriumcitrat), sötningsmedel",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 40,
+    "brand" : "iMat",
+    "description" : "Vårt vatten kommer från den naturliga källan i Flingsta, beläget i lummiga Hedströmsdalen i Bergslagen",
+    "contents" : "Naturligt mineralvatten.",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 41,
+    "brand" : "iMat exotic",
+    "description" : "Färsk annanas är en spännande smakupplevelse med många användningsområden",
+    "contents" : "Ananas klass 1",
+    "origin" : "Costa Rica"
+  },
+  {
+    "productId": 42,
+    "brand" : "iMat exotic",
+    "description" : "Fikon passar i desserter och bakverk. Mixa fikon med mandel och kanel och rulla till bollar. Pudra över kakao eller vänd i cocos. Fint till kaffet!",
+    "contents" : "Fikon klass 1",
+    "origin" : "Peru"
+  },
+  {
+    "productId": 43,
+    "brand" : "iMat exotic",
+    "description" : "Inuti granatäpplet finns ett geléaktigt kött och kärnor som går att äta. Smaken påminner om vinbär. Passar i fruktsallad, dessert och matlagning",
+    "contents" : "Granatäpplen klass 1",
+    "origin" : "Turkiet"
+  },
+  {
+    "productId": 44,
+    "brand" : "iMat exotic",
+    "description" : "Kiwi har en söt smak med viss syrlighet. Dela och ät med sked eller använd till fruktsallader",
+    "contents" : "Kiwi klass 1",
+    "origin" : "Italien"
+  },
+  {
+    "productId": 45,
+    "brand" : "iMat exotic",
+    "description" : "Inget slår smaken av en mogen mango - söt, mjuk och exotisk. Mangokuber är gott i såväl en fruktsallad som en curryrätt",
+    "contents" : "Mango klass 1",
+    "origin" : "USA"
+  },
+  {
+    "productId": 46,
+    "brand" : "iMat exotic",
+    "description" : "Papaya är ett slags centralamerikansk melon med fruktkött så sött och mjukt att det nästan smälter i munnen",
+    "contents" : "Papaya klass 1",
+    "origin" : "Brasilien"
+  },
+  {
+    "productId": 47,
+    "brand" : "iMat exotic",
+    "description" : "Rambutan (Nephelium lappaceum) är en taggig frukt med en ganska stor kärna i mitten. Fruktköttet är ljust och vattnigt",
+    "contents" : "Rambutan klass 1",
+    "origin" : "Sydostasien"
+  },
+  {
+    "productId": 48,
+    "brand" : "Findus",
+    "description" : "Fisk är en sund proteinkälla som är rik på omega-3 och har lågt innehåll av mättat fett. Våra Frasiga fiskpinnar är inget undantag",
+    "contents" : "Filéer av Alaska Pollock 65 %, vetemjöl, rapsolja, vatten, potatisstärkelse, salt, kryddor (paprika, gurkmeja), jäst",
+    "origin" : "Fiskad i nordöstra eller nordvästra Stilla havet"
+  },
+  {
+    "productId": 49,
+    "brand" : "iMat",
+    "description" : "Fina kräfter till kalas",
+    "contents" : "Kräftor",
+    "origin" : "Turkiet"
+  },
+  {
+    "productId": 50,
+    "brand" : "iMat",
+    "description" : "Fina laxfiléer  enkla att tillaga efter behag",
+    "contents" : "Laxfilé",
+    "origin" : "Norge"
+  },
+  {
+    "productId": 51,
+    "brand" : "iMat",
+    "description" : "Fina laxfiléer  enkla att tillaga efter behag",
+    "contents" : "Laxfilé",
+    "origin" : "Norge"
+  },
+  {
+    "productId": 52,
+    "brand" : "Findus",
+    "description" : "Fina sejfiléer",
+    "contents" : "Sejfilé",
+    "origin" : "Norge"
+  },
+  {
+    "productId": 53,
+    "brand" : "Abba",
+    "description" : "En av våra storsäljande sillsorter med utvalda bitar sill med klassisk kryddning som morot, kryddpeppar och lök. En klassiker som passar till allt",
+    "contents" : "Sill, lök (22%), socker, morot (4%), salt, ättika, kryddor (svartpeppar, kryddpeppar), naturlig arom, syra (ättiksyra), konserveringsmedel (natriumbensoat, kaliumsorbat)",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 54,
+    "brand" : "Abba",
+    "description" : "MSC certifierad Skipjack tonfisk i vatten består av fina filébitar som är fiskad på ett hållbart sätt",
+    "contents" : "Tonfiskfilé i bitar (skipjack), vatten, salt",
+    "origin" : "Stilla havet, fångstzon 71. Tonfisken är fångad i redskap som inte skadar delfiner"
+  },
+  {
+    "productId": 55,
+    "brand" : "iMat",
+    "description" : "Aubergine är gott i ugnsrätter och grytor som de klassiska rätterna moussaka och ratatouille",
+    "contents" : "Aubergine klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 56,
+    "brand" : "iMat",
+    "description" : "En mogen avokado har mjukt, krämigt fruktkött med mild och lite nötaktig smak. Passar på mackan, till räkor och i guacamole till tacos",
+    "contents" : "Avocado klass 1",
+    "origin" : "Chile"
+  },
+  {
+    "productId": 57,
+    "brand" : "iMat",
+    "description" : "Gurka är en art i familjen gurkväxter, och benämning på både plantan och dess frukt, vilken enligt botanisk terminologi är ett bär",
+    "contents" : "Gurka klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 58,
+    "brand" : "Zeta",
+    "description" : "Fina oliver med kärnor har ett fast fruktkött, en fruktig, nötig och gräsig ton och en mild ton av honung",
+    "contents" : "Oliver, vatten, havssalt, antioxidationsmedel E300, surhetsreglerande medel E330",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 59,
+    "brand" : "Sevan",
+    "description" : "Hälsosam och fiberrik, används flitigt i grytor, soppor och på mezebordet",
+    "contents" : "Okra (100%)",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 60,
+    "brand" : "iMat",
+    "description" : "En blandning av gul och röd paprika. Passar i både kall och varm matlagning, eller servera till plockmat med lite dippsås",
+    "contents" : "Paprika klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 61,
+    "brand" : "iMat",
+    "description" : "Pumpa är lätt att använda, den kan ugnsbakas, rostas, mosas eller stekas. Den passar bra även i efterrätter och bakverk",
+    "contents" : "Pumpa klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 62,
+    "brand" : "iMat",
+    "description" : "Även känd som zucchini. Kan ätas både rå och tillagad",
+    "contents" : "Squash",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 63,
+    "brand" : "iMat",
+    "description" : "Fina buketter med mild och härlig kålsmak",
+    "contents" : "Blomkål klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 64,
+    "brand" : "iMat",
+    "description" : "Spänstiga buketter med mild och fin kålsmak",
+    "contents" : "Broccoli klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 65,
+    "brand" : "Findus",
+    "description" : "Små, fina BRYSSELKÅL Milda och delikata, med en rund sötma",
+    "contents" : "Brysselkål klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 66,
+    "brand" : "iMat",
+    "description" : "Spröda och krispiga blad med mild och fin kålsmak. Särskilt god i råkostsallader",
+    "contents" : "Kinakål klass 1",
+    "origin" : "Polen"
+  },
+  {
+    "productId": 67,
+    "brand" : "iMat",
+    "description" : "Krispig och matig sallad med kraftig smak. Ett måste i Caesarsalladen",
+    "contents" : "Romanesco klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 68,
+    "brand" : "iMat",
+    "description" : "Fyllig och krispig smak som liknar vitkål. God finstrimlad i sallad eller wok.",
+    "contents" : "Rödkål klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 69,
+    "brand" : "iMat eco",
+    "description" : "Tydlig kålsmak och krispiga blad. Vitkål passar till allt möjligt",
+    "contents" : "Ekologisk vitkål klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 70,
+    "brand" : "iMat",
+    "description" : "God kålsmak och krispiga, krusiga blad. God att skiva tunt i sallad",
+    "contents" : "Savoykål klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 71,
+    "brand" : "Skövde Slakteri AB",
+    "description" : "Grytbitar av nöt. Ytterlår",
+    "contents" : "Svenskt nötkött",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 72,
+    "brand" : "Scan",
+    "description" : "Högrev är smakrik med fin marmorering och ger goda grytor om det får koka långsamt och länge",
+    "contents" : "Högrev av svenskt nötkött",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 73,
+    "brand" : "Scan",
+    "description" : "En favorit på middagsbordet. Stek, grilla eller tillaga i ugnen och servera med goda tillbehör",
+    "contents" : "Kycklingfilé av bröst",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 74,
+    "brand" : "Kronfågel",
+    "description" : "Kycklingklubbor passar bra att tillaga både i ugnen och på grillen. Smaksätt efter behag till en god middag",
+    "contents" : "Kycklingklubba med del av ryggben",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 75,
+    "brand" : "iMat eco",
+    "description" : "Hel kyckling från iMat har en härlig smak, ett populärt val till grytor och annan basmat",
+    "contents" : "Hel ekologisk kyckling. Klass A",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 76,
+    "brand" : "iMat",
+    "description" : "Nötfärs från svenska gårdar.",
+    "contents" : "Finmald färs av nöt, beredd (mald) i Sverige",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 77,
+    "brand" : "President",
+    "description" : "Fransk vitmögelost med mild och lite syrlig smak som blir fylligare när osten mognar",
+    "contents" : "Vitmögelost av pastöriserad komjölk",
+    "origin" : "Frankrike"
+  },
+  {
+    "productId": 78,
+    "brand" : "Arla",
+    "description" : "Klassisk filmjölk, gjord på god svensk mjölk. Filen har en naturell, svagt syrlig smak med karakteristisk filarom",
+    "contents" : "Högpastöriserad mjölk, filkultur och vitamin D",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 79,
+    "brand" : "Arla",
+    "description" : "Färskost med den älskade och karaktäristiska krämigheten och fräschheten. Perfekt till smörgåsen, bakverk och i matlagning",
+    "contents" : "Pastöriserad grädde, mjöl, salt, mjölsyrakultur.",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 80,
+    "brand" : "Arla",
+    "description" : "Mellanmjölk har en härligt fyllig mjölksmak och är ett populärt val till frukostflingorna, gröten eller som dryck till måltiden",
+    "contents" : "Mjölk, vitamin D. Lågpastöriserad",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 81,
+    "brand" : "Galbani",
+    "description" : "Färskost med mild smak. Passar till olika typer av gratänger och pastarätter",
+    "contents" : "Pastöriserad komjölk, salt, löpe, citronsyra",
+    "origin" : "Italien"
+  },
+  {
+    "productId": 82,
+    "brand" : "Västerbottensost",
+    "description" : "En svensk grynpipig hårdost gjord på norrländsk komjölk och tillverkad vid det lilla mejeriet i Burträsk i Västerbotten",
+    "contents" : "Pastöriserad mjölk, salt, mjölksyrakultur, löpe, konserveringsmedel E202, E235 och E251",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 83,
+    "brand" : "Skånemejerier",
+    "description" : "Våra laktosfria produkter är garanterat 100% fria från laktos och sortimentet utökas ständigt med nya produkter",
+    "contents" : "Högpastöriserad mjölk, laktasenzym, yoghurtkultur, Lactobacillus acidophilus, Bifidobacterium sp. och vitamin D",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 84,
+    "brand" : "Salakis",
+    "description" : "Mild yoghurt, med en behaglig syra och krämig konsistens",
+    "contents" : "Pastöriserad mjölk och grädde, yoghurtkultur",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 86,
+    "brand" : "Salakis",
+    "description" : "Charentaismelon är en typ av fransk cantaloupe, en liten variant av melon, ungefär lika stor som en softball",
+    "contents" : "Melon klass 1",
+    "origin" : "Fankrike"
+  },
+  {
+    "productId": 87,
+    "brand" : "iMat",
+    "description" : "Populär melon av högst kvalitet",
+    "contents" : "Melon klass 1",
+    "origin" : "Brasilien"
+  },
+  {
+    "productId": 88,
+    "brand" : "iMat",
+    "description" : "Saftigt och riktigt söt, med utpräglad melonsmak. Passar både i fruktsalladen och att äta som den är",
+    "contents" : "Honungsmelon klass 1",
+    "origin" : "Costa Rica"
+  },
+  {
+    "productId": 89,
+    "brand" : "iMat",
+    "description" : "Nätmelon har fått sitt namn efter det typiska nätmönstret på skalet. Fruktköttet är laxfärgat, mjukt och smältande",
+    "contents" : "Nätmelon klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 90,
+    "brand" : "iMat",
+    "description" : "Vattenmelonen har sprött och krispigt fruktkött, söt smak med viss syrlighet och passar utmärkt som förfriskning eller dessert",
+    "contents" : "Vattenmelon klass 1",
+    "origin" : "Brasilien"
+  },
+  {
+    "productId": 91,
+    "brand" : "Dansukker",
+    "description" : "Farinsocker är socker som blandats med rörsockersirap. Ett gyllenbrunt fuktigt socker med aromatisk smak",
+    "contents" : "Socker och rörsockersirap",
+    "origin" : "Danmark"
+  },
+  {
+    "productId": 92,
+    "brand" : "Kungsörnen",
+    "description" : "Osiktat fullkornsmjöl av vete lämpligt till grövre brödtyper.",
+    "contents" : "Grahamsmjöl av VETE. 100% fullkorn",
+    "origin" : "Brasilien"
+  },
+  {
+    "productId": 93,
+    "brand" : "Kungsörnen",
+    "description" : "Finmalt rågmjöl, mald av hela rågkärnan. 100 % fullkorn. Från svenska åkrar. Klimat- och naturspannmål",
+    "contents" : "Fint rågmjöl, maltmjöl av korn. 100% fullkorn.",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 94,
+    "brand" : "Falksalt",
+    "description" : "Det tillsatta jodet gör vårt fina salt till ett utmärkt matlagnings- och bordssalt för de flesta",
+    "contents" : "Salt (NaCl), jod (5 mg/100 g), klumpförebyggande medel (E535/536)",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 95,
+    "brand" : "Dansukker",
+    "description" : "Finkornigt socker som tillverkas av betsocker och benämns som sockerarten sackaros",
+    "contents" : "Socker",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 96,
+    "brand" : "Kungsörnen",
+    "description" : "Vetemjöl är grunden till nästan vilket bak du än tänker ta dig an. Bullar, matbröl, frallor, sockerkaka eller småkakor",
+    "contents" : "Vetemjöl, vetemalt, mjölbehandlingsmedel (askorbinsyra)",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 97,
+    "brand" : "Den Lille Nöttefabriken",
+    "description" : "Cashewnötter är perfekt som snacks eller att ha som mellanmål när du behöver energi snabbt",
+    "contents" : "Cashewnötter. Kan innehålla spår av jordnötter, mandel, paranötter, hasselnötter mm",
+    "origin" : "Icke EU"
+  },
+  {
+    "productId": 98,
+    "brand" : "Nuts & Bolts",
+    "description" : "Hasselnötskärnor är goda både i fruktsallad, kak- och brödbaket. Perfekt i egna müslin och som snacks",
+    "contents" : "Hasselnötter. Kan innehålla spår av jordnötter, sesamfrön, soja, mandel, cashewnötter mm",
+    "origin" : "Se förpackningen"
+  },
+  {
+    "productId": 99,
+    "brand" : "Nuts & Bolts",
+    "description" : "Jordnötter är världens populäraste nöt, vilket egentligen är konstigt eftersom den inte är en nöt utan ett frö i en baljväxt",
+    "contents" : "Jordnötter 95%, solrosolja, salt. Kan innehålla spår av sesamfrön, soja, mandel, cashewnötter mm",
+    "origin" : "Icke EU"
+  },
+  {
+    "productId": 100,
+    "brand" : "iMat exotic",
+    "description" : "Inget går upp mot en kokosnöten, även om den kan vara en svår nöt att knäcka",
+    "contents" : "Kokosnöt klass 1",
+    "origin" : "Elfenbenskusten"
+  },
+  {
+    "productId": 101,
+    "brand" : "Nuts & Bolts",
+    "description" : "Mandlar med fin, nötig smak. Goda som snacks, i maten och till bakverk",
+    "contents" : "Mandlar. Produkten kan innehålla spår av hasselnöt",
+    "origin" : "USA"
+  },
+  {
+    "productId": 102,
+    "brand" : "Exotic snacks",
+    "description" : "Pistagenötter passar utmärkt att snacksa på som de är eller varför inte strössla dem över din yoghurt?",
+    "contents" : "Pistagenötter. Kan innehålla spår av jordnötter, cashewnötter, valnötter, pekannötter, mm",
+    "origin" : "USA"
+  },
+  {
+    "productId": 103,
+    "brand" : "Exotic snacks",
+    "description" : "Valnötter är en mångsidig nöt, redo att ätas som snacks, använda till bak eller toppa en gräddig gorgonzolasås",
+    "contents" : "Valnötter. Kan innehålla spår av jordnötter, cashewnötter, valnötter, pekannötter, mm",
+    "origin" : "Moldavien"
+  },
+  {
+    "productId": 104,
+    "brand" : "Risenta",
+    "description" : "Pumpakärnor är inte bara goda med sin milda och nötiga smak, de är också rika på fiber, protein ochinnehåller viktiga näringsämnen",
+    "contents" : "Pumpakärnor. Kan innehålla spår av gluten, sojabönor, selleri, sesamfrö, sulfit",
+    "origin" : "EU/Kina"
+  },
+  {
+    "productId": 105,
+    "brand" : "iMat",
+    "description" : "Kärnorna är inte bara goda för sin milda och nötiga smak, de är också rika på fiber, protein och innehållerviktiga näringsämnen",
+    "contents" : "Solroskärnor. Kan innehålla spår av gluten, sojabönor, selleri, sesamfrö, sulfit",
+    "origin" : "Kazakstan"
+  },
+  {
+    "productId": 106,
+    "brand" : "Barilla",
+    "description" : "Farfalle är gjord på 100% durumvete och är en klassisk, lekfull pastaform formade som fjärilar",
+    "contents" : "Durumveta. Kan innehålla spår av ägg, soja och senap",
+    "origin" : "Icke EU"
+  },
+  {
+    "productId": 107,
+    "brand" : "Zeta",
+    "description" : "Klassisk italiensk bandpasta bakad på ägg och durumvete som har sitt ursprung i det toskanska köket",
+    "contents" : "Durumvetemjöl, ögg (24%). Kan innehålla spår av soja och senap",
+    "origin" : "Italien"
+  },
+  {
+    "productId": 108,
+    "brand" : "Barilla",
+    "description" : "Pasta Fusilli är en durumpasta formad som skruvar. Ursprunget är från de norra och centrala delarna av Italien",
+    "contents" : "Durumvetemjöl, ögg (24%). Kan innehålla spår av soja och senap",
+    "origin" : "Odlat i Lettland"
+  },
+  {
+    "productId": 109,
+    "brand" : "iMat",
+    "description" : "Lasagneplattor utmärkta till den klassiska lasagnen eller som bas till dina egna favoritfyllningar",
+    "contents" : "Vetemjöl 41%, durumvetemjöl 27%, ägg 20%, vatten. Kan innehålla spår av soja och senap",
+    "origin" : "Odlat i EU/Icke EU"
+  } ,
+  {
+    "productId": 110,
+    "brand" : "Barista",
+    "description" : "Penne är en pasta med många olika namn. Eftersom penne är så älskad av italienare ger varje region den sitt unika namn",
+    "contents" : "Durumvetemjöl. Kan innehålla spår av soja och senap",
+    "origin" : "Odlat i EU/Icke EU"
+  },
+  {
+    "productId": 111,
+    "brand" : "Barilla",
+    "description" : "Pasta Rigatoni från Barilla är en durumvetepasta som urpsrungligen kommer från Italiens huvudstad Rom",
+    "contents" : "Durumvetemjöl. Kan innehålla spår av soja och senap",
+    "origin" : "Odlat i EU/Icke EU"
+  },
+  {
+    "productId": 112,
+    "brand" : "Kungsörnen",
+    "description" : "Spaghetti ska kokas i rikligt med vatten. Servera med en god köttfärssås. Strö över lite paremsan",
+    "contents" : "Durumvetemjöl, vetemjöl",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 113,
+    "brand" : "iMat",
+    "description" : "Basmatiris är ett luftigt, långkornigt ris som inte klibbar",
+    "contents" : "Basmatiris, skalat och polerat",
+    "origin" : "Indien"
+  },
+  {
+    "productId": 114,
+    "brand" : "iMat",
+    "description" : "Fullkornsris klibbar inte och passar bra till både kött-, fisk- och grönsaksrätter",
+    "contents" : "Långkornigt fullkornsris. Specialbehandlat, skalat och opolerat",
+    "origin" : "EU"
+  },
+  {
+    "productId": 115,
+    "brand" : "iMat",
+    "description" : "Jasminris är ett vitt, klibbigt ris med en naturligt aromatisk doft och smak av jasmin. Passar bra till orientalisk mat",
+    "contents" : "Jasminris (Thai Hom Mali), skalat och polerat",
+    "origin" : "Thailand"
+  },
+  {
+    "productId": 116,
+    "brand" : "iMat",
+    "description" : "Bra matpotatis som håller ihop fint när den tillagas. Koka, stek, stuva eller använd till ugnsrätter som Janssons frestelse",
+    "contents" : "Sorter: Belana, Taisiya, Princess, Gala, Queen Anne, Inova, Melody, Solist, Folva, Colomba, Baby Lou och Ivetta",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 117,
+    "brand" : "iMat",
+    "description" : "En mycket god potatis som passar till det mesta",
+    "contents" : "Sort: LaBella",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 118,
+    "brand" : "iMat",
+    "description" : "Rotfrukt med rödaktigt kött som påminner om potatis i konsistensen. God att ugnsbaka eller blanda i fruktiga grytor",
+    "contents" : "Sötpotatis klass 1",
+    "origin" : "Eqypten"
+  },
+  {
+    "productId": 119,
+    "brand" : "iMat",
+    "description" : "Potatispure helt utan animalier - alltså ingen mjölk och inget smör",
+    "contents" : "Potatis 95%, salt, emulgeringsmedel (E471), antioxidationsmedel (E300), kryddor (svartpeppar, gurkmeja), arom",
+    "origin" : "EU"
+  },
+  {
+    "productId": 120,
+    "brand" : "iMat",
+    "description" : "Ett långkornigt och klibbfritt ris med nötig smak. Koka i 10 minuter och servera till olika typer av rätter",
+    "contents" : "Råris (ångpreparerat).Kan innehålla spår av gluten",
+    "origin" : "Kina"
+  },
+  {
+    "productId": 121,
+    "brand" : "iMat",
+    "description" : "Rotfrukt med speciell och sötaktig smak. Ger karaktär till mos, grytor och ugnsrostade rotfrukts- blandningar",
+    "contents" : "Kålrot klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 122,
+    "brand" : "iMat",
+    "description" : "Majrovans vanligaste användningsområden är råkost, i sallader, som delar i stuvning, och den kan även stekas",
+    "contents" : "Majrova klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 123,
+    "brand" : "iMat",
+    "description" : "Knapriga, söta rötter vars sötma förstärks vid tillagning. Goda att dippa eller knapra på som de är",
+    "contents" : "Morötter klass 1",
+    "origin" : "Frankrike"
+  },
+  {
+    "productId": 124,
+    "brand" : "iMat",
+    "description" : "Kryddig och lite söt rot som är fin som krydda i soppor och grytor, eller att ugnsrosta med andra rotfrukter",
+    "contents" : "Palsternacka klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 125,
+    "brand" : "iMat",
+    "description" : "Pepparrot är en ört som rå har en kraftig, och som namnet antyder, pepparaktig smak",
+    "contents" : "Pepparrot klass 1",
+    "origin" : "Ungern"
+  },
+  {
+    "productId": 126,
+    "brand" : "iMat",
+    "description" : "Krispiga små munsbitar med fräsch och lite pepprig smak. Goda att dippa eller blanda i sallader",
+    "contents" : "Rädisor klass 1",
+    "origin" : "Nederländerna"
+  },
+  {
+    "productId": 127,
+    "brand" : "iMat",
+    "description" : "Krispiga små munsbitar med fräsch och lite pepprig smak. Goda att dippa eller blanda i sallader",
+    "contents" : "Rädisor klass 1",
+    "origin" : "Nederländerna"
+  },
+  {
+    "productId": 128,
+    "brand" : "iMat",
+    "description" : "Rotselleri gör sig bäst när den får bakas länge i ugn. I skalet sitter massor av smak, så låt det vara kvar",
+    "contents" : "Rotselleri klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 129,
+    "brand" : "iMat",
+    "description" : "Frukten liknar persika eller nektarin och färgen är gul till orange, ibland med röda strimmor",
+    "contents" : "Aprikos klass 1",
+    "origin" : "Sydafrika"
+  },
+  {
+    "productId": 130,
+    "brand" : "iMat",
+    "description" : "Körsbär är en stenfrukt som är släkt med plommon, och kan vara gula, gulröda, mörkröda och nästan svarta",
+    "contents" : "Körsbär klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 131,
+    "brand" : "iMat",
+    "description" : "Nektarin år en glattskalig typ av persika och tillhör samma släkte som plommon, mandel och aprikos",
+    "contents" : "Nektarin klass 1",
+    "origin" : "Sydafrika"
+  },
+  {
+    "productId": 132,
+    "brand" : "iMat",
+    "description" : "Persikan tillhör samma släkte som plommon, mandel och aprikos. Härstammar troligen från Kina",
+    "contents" : "Persika klass 1",
+    "origin" : "Sydafrika"
+  },
+  {
+    "productId": 133,
+    "brand" : "iMat",
+    "description" : "Plommon är ett vanligt fruktträd med söt stenfrukt. Kan ätas färsk, torkas, användas till sylt eller marmelad",
+    "contents" : "Plommon klass 1",
+    "origin" : "Sydafrika"
+  },
+  {
+    "productId": 134,
+    "brand" : "Estrella",
+    "description" : "Krispiga släta chips med lätt och härlig sälta som lyfter den goda potatisen till skyarna. Perfekta att dippa eller servera precis som de är",
+    "contents" : "Potatis, solros-/rapsolja, salt. Kan innehålla spår av mjölk",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 135,
+    "brand" : "Lindt",
+    "description" : "Chokladkaka av mörk choklad, tunn och intensiv med de finaste ingredienser. En sann smaksensation för alla sinnen",
+    "contents" : "Socker, kakaomassa, kakaosmör, mjölkfett, emulgeringsmedel, salt 0,3%. Kan innehålla hasselnötter, mandlar",
+    "origin" : "Schweiz"
+  },
+  {
+    "productId": 136,
+    "brand" : "Triumf",
+    "description" : "Klassisk jordgubbs- och vaniljgräddglass med smakfulla virvlar av jordgubbsrippel i en frasig våffla",
+    "contents" : "Skummjölk, grädde, socker, kokosfett, emulgeringsmedel (SOJALECITIN), salt, färgämne, jordgubbar, jordgubbspuré",
+    "origin" : "Schweiz"
+  },
+  {
+    "productId": 137,
+    "brand" : "Pågens",
+    "description" : "Bullar med krämig kanelfyllning och toppade med pärlsocker. Fint till fikastunden eller som mellanmål med lite mjölk",
+    "contents" : "Vetemjöl, socker, vatten, rapsolja, farinsocker, jäst, kanel, fullhärdad rapsolja, naturliga arom",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 138,
+    "brand" : "Göteborgs kex",
+    "description" : "Oemotståndliga kakor med spröda kex och len nougatkräm. Nu med 25% mer fyllning för ännu godare smak",
+    "contents" : "Vetemjöl, socker,  kokosfett, vasslepulver, hasselnötter,  kakaopulver, emulgeringsmedel, bakpulver, vanillin",
+    "origin" : "Lettland"
+  },
+  {
+    "productId": 139,
+    "brand" : "ProPud",
+    "description" : "Chokladbollar toppade med kokos. Passande att ha hemma i skafferiet om du får trevligt sällskap!",
+    "contents" : "Havregryn, socker, margarin, vatten, salt, fettreducerat kakaopulver, emulgeringsmedel, kokosflingor",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 140,
+    "brand" : "Lindt",
+    "description" : "Exklusivt utvalda praliner i finaste choklad. Små mästerverk av hantverk och en passion för detaljer",
+    "contents" : "Socker, kakaosmör, vatten, salt, kakaomassa, emulgeringsmedel, kokosflingor, apelsinskal, citronskal, kaffe",
+    "origin" : "Schweiz"
+  },
+  {
+    "productId": 141,
+    "brand" : "iMat",
+    "description" : "Har en sötaktig och kraftig smak. Passar med tomater, ljust kött och i pastarätter, sallader, soppor mm",
+    "contents" : "Basilika klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 142,
+    "brand" : "Spisa",
+    "description" : "Färska örter och naturlig smaksättning",
+    "contents" : "Citronmeliss klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 143,
+    "brand" : "Spisa",
+    "description" : "Klassisk örtkrydda med mörkgrön färg. God till fisk och skaldjur samt i såser till kalvkött och potatis",
+    "contents" : "Dill klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 144,
+    "brand" : "Spisa",
+    "description" : "Färska örter och naturlig smaksättning",
+    "contents" : "Koriander klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 145,
+    "brand" : "Spisa",
+    "description" : "Färska örter och naturlig smaksättning",
+    "contents" : "Oregano klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 146,
+    "brand" : "iMat",
+    "description" : "Klassisk husmanskrydda som även passar i sallader, dressingar, potatisrätter samt till svamp",
+    "contents" : "Persilja klass 1",
+    "origin" : "Italien"
+  },
+  {
+    "productId": 147,
+    "brand" : "Spisa",
+    "description" : "Rosmarin är en barrskogsdoftande ört med blommigt kryddig smak. Passar bra till både kött och potatis",
+    "contents" : "Rosmarin klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 148,
+    "brand" : "Spisa",
+    "description" : "Timjan har en distinkt och behagligt skarp arom som för tankarna till barrträd vid medelhavet",
+    "contents" : "Timjan klass 1",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 149,
+    "brand" : "iMat eco",
+    "description" : "Blandfärs är svenskt, fint malen 50/50-blandning av nöt- och fläskfärs som passar till allt ifrån köttbullar till tacos",
+    "contents" : "50% Nöt- och 50% fläskkött. Förhållandet mellan kollagen och köttprotein lägre än 18%. Fetthalt lägre än 18%",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 150,
+    "brand" : "iMat eco",
+    "description" : "KRAV-märkt nötfärs med 15 % fetthalt från svenska gårdar",
+    "contents" : "Finmald färs av nöt, beredd (mald) i Sverige",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 151,
+    "brand" : "Dansukker",
+    "description" : "Ekologiskt strösocker som framställs av sockerbetor odlade på svenska och danska åkrar",
+    "contents" : "KRAV-ekologiskt betsocker",
+    "origin" : "Sverige"
+  },
+  {
+    "productId": 152,
+    "brand" : "iMat",
+    "description" : "Fina buketter med mild och härlig kålsmak",
+    "contents" : "Ekologisk blomkål klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 153,
+    "brand" : "iMat",
+    "description" : "Brysselkål är små fina kålhuvuden som passar utmärkt till många måltider både under helg och vardag",
+    "contents" : "Ekologisk brysselkål klass 1",
+    "origin" : "Spanien"
+  },
+  {
+    "productId": 154,
+    "brand" : "Stjärnägg",
+    "description" : "Ekologiska svenska ägg från frigående hönor med tillgång till både inne- och utevistelse.",
+    "contents" : "Ägg",
+    "origin" : "Sverige"
+  }
+]
