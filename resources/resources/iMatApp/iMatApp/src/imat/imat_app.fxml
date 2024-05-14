@@ -3,9 +3,6 @@
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
@@ -20,25 +17,6 @@
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <Label layoutX="306.0" layoutY="147.0" prefHeight="17.0" prefWidth="389.0" text="Sökväg till mappen där programmet hämtar och sparar data:" />
-      <Label fx:id="pathLabel" alignment="CENTER" layoutX="115.0" layoutY="190.0" prefHeight="17.0" prefWidth="771.0" styleClass="text-sample" text="Label" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="114.0" />
-      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="14.0">
-         <image>
-            <Image url="@resources/logo.png" />
-         </image>
-      </ImageView>
-      <ScrollPane layoutX="110.0" layoutY="190.0" prefHeight="464.0" prefWidth="861.0">
-         <content>
-            <GridPane fx:id="productList" hgap="50.0" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="778.0" vgap="50.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-            </GridPane>
-         </content>
-      </ScrollPane>
       <SplitPane dividerPositions="0.2" layoutY="86.0" prefHeight="613.0" prefWidth="1000.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -110,9 +88,16 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="893.0">
                <children>
                   <ScrollPane layoutX="98.0" layoutY="109.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="612.0" prefWidth="795.0" />
-                    </content>
+                     <content>
+                        <GridPane fx:id="productList" hgap="50.0" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="778.0" vgap="50.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
                   </ScrollPane>
                </children>
             </AnchorPane>
