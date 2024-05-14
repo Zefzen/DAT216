@@ -1,12 +1,13 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/resources/resources/producteditor/__MACOSX/producteditor/lib/._appframework-1.0.3.jar!/" />
-      <root url="jar://$PROJECT_DIR$/resources/resources/producteditor/__MACOSX/producteditor/lib/._swing-layout-1.0.4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/resources/resources/producteditor/__MACOSX/producteditor/lib/._projectbackend.jar!/" />
-      <root url="jar://$PROJECT_DIR$/resources/resources/producteditor/__MACOSX/producteditor/lib/._swing-worker-1.1.jar!/" />
+      <root url="file://$USER_HOME$/JavaLibs/javafx-sdk-22/lib" />
     </CLASSES>
     <JAVADOC />
+    <NATIVE>
+      <root url="file://$USER_HOME$/JavaLibs/javafx-sdk-22/lib" />
+    </NATIVE>
     <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/JavaLibs/javafx-sdk-22/lib" recursive="false" />
   </library>
 </component>

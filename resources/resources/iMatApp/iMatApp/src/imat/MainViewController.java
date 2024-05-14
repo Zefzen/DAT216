@@ -25,9 +25,6 @@ public class MainViewController implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
 
-        String iMatDirectory = iMatDataHandler.imatDirectory();
-
-        pathLabel.setText(iMatDirectory);
 
 
         for (int i = 0; i < 10; i++) {

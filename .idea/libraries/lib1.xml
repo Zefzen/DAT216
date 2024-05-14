@@ -5,8 +5,10 @@
       <root url="jar://$PROJECT_DIR$/resources/resources/producteditor/producteditor/lib/projectbackend.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/resources/producteditor/producteditor/lib/swing-layout-1.0.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/resources/producteditor/producteditor/lib/swing-worker-1.1.jar!/" />
+      <root url="file://$PROJECT_DIR$/resources/resources/producteditor/producteditor/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/resources/resources/producteditor/producteditor/lib" recursive="false" />
   </library>
 </component>
