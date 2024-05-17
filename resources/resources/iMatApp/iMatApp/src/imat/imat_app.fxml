@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
@@ -16,13 +17,15 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
       <StackPane prefHeight="702.0" prefWidth="1000.0">
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.55);">
+            <AnchorPane prefHeight="200.0" prefWidth="928.0" style="-fx-background-color: rgba(0, 0, 0, 0.55);">
                <children>
                   <AnchorPane layoutX="80.0" layoutY="70.0" prefHeight="541.0" prefWidth="848.0" style="-fx-background-color: white;">
                      <children>
@@ -37,23 +40,28 @@
                               <Font size="44.0" />
                            </font>
                         </Label>
-                        <Label layoutX="470.0" layoutY="94.0" prefHeight="30.0" prefWidth="138.0" text="ID-Nummer: 12345">
+                        <Label layoutX="653.0" layoutY="155.0" prefHeight="30.0" prefWidth="138.0" text="ID-Nummer: 12345">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label layoutX="671.0" layoutY="99.0" prefHeight="20.0" prefWidth="98.0" text="Arla">
+                        <Label layoutX="468.0" layoutY="187.0" prefHeight="20.0" prefWidth="98.0" text="Arla">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label layoutX="475.0" layoutY="154.0" prefHeight="282.0" prefWidth="316.0" text="Hej hej detta är väldigt god mellanmjölk för dig som vill ha mellanmjölk. " wrapText="true" />
-                        <Label layoutX="472.0" layoutY="126.0" text="Från Sverige">
+                        <Label layoutX="468.0" layoutY="227.0" prefHeight="209.0" prefWidth="316.0" text="Hej hej detta är väldigt god mellanmjölk för dig som vill ha mellanmjölk. " wrapText="true" />
+                        <Label layoutX="468.0" layoutY="160.0" text="Från Sverige">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Button layoutX="476.0" layoutY="448.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="341.0" text="Köp" />
+                        <Button layoutX="468.0" layoutY="448.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="341.0" text="Köp" />
+                        <Label layoutX="468.0" layoutY="92.0" prefHeight="56.0" prefWidth="196.0" text="22,90 kr">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </children>
@@ -164,7 +172,7 @@
             </AnchorPane>
          </children>
       </StackPane>
-      <AnchorPane layoutY="88.0" prefHeight="614.0" prefWidth="1001.0" style="-fx-background-color: red;">
+      <AnchorPane layoutY="88.0" prefHeight="614.0" prefWidth="1001.0" style="-fx-background-color: white;">
          <children>
             <Label layoutX="275.0" layoutY="45.0" prefHeight="50.0" prefWidth="430.0" text="Uppdatera dina uppgifter">
                <font>
@@ -240,6 +248,387 @@
                   <Font size="28.0" />
                </font>
             </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="588.0" layoutY="490.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="321.0" text="Gå vidare till Adress">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Line endX="386.0" endY="1.0" layoutX="326.0" layoutY="51.0" startX="-61.0" startY="1.0" />
+            <Circle fill="DODGERBLUE" layoutX="262.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="374.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="487.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="599.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="712.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="234.0" layoutY="83.0" text="Varukorg" />
+            <Label layoutX="353.0" layoutY="83.0" text="Adress" />
+            <Label layoutX="453.0" layoutY="83.0" text="Leveranstid" />
+            <Label layoutX="572.0" layoutY="83.0" text="Betalning" />
+            <Label layoutX="662.0" layoutY="83.0" text="Orderbekräftelse" />
+            <Label layoutX="256.0" layoutY="39.0" text="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="368.0" layoutY="39.0" text="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="481.0" layoutY="39.0" text="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="593.0" layoutY="39.0" text="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="706.0" layoutY="39.0" text="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="440.0" layoutY="126.0" text="Varukorg">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="105.0" layoutY="163.0" prefHeight="313.0" prefWidth="807.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
+            <Label layoutX="105.0" layoutY="490.0" prefHeight="40.0" prefWidth="192.0" text="22 varor">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="542.0" text="Total: 1000 kr">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="588.0" layoutY="490.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="341.0" text="Gå vidare till Leveranstid">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Line endX="386.0" endY="1.0" layoutX="326.0" layoutY="51.0" startX="-61.0" startY="1.0" />
+            <Circle fill="WHITE" layoutX="262.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="DODGERBLUE" layoutX="374.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="487.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="599.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="712.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="234.0" layoutY="83.0" text="Varukorg" />
+            <Label layoutX="353.0" layoutY="83.0" text="Adress" />
+            <Label layoutX="453.0" layoutY="83.0" text="Leveranstid" />
+            <Label layoutX="572.0" layoutY="83.0" text="Betalning" />
+            <Label layoutX="662.0" layoutY="83.0" text="Orderbekräftelse" />
+            <Label layoutX="256.0" layoutY="39.0" text="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="368.0" layoutY="39.0" text="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="481.0" layoutY="39.0" text="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="593.0" layoutY="39.0" text="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="706.0" layoutY="39.0" text="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="223.0" text="Namn:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="283.0" text="Adress:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="343.0" text="Postnummer:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="403.0" text="Ort:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="560.0" layoutY="223.0" text="Telefonnummer:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="560.0" layoutY="283.0" text="Mail:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" layoutY="128.0" text="Leveransuppgifter">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField layoutX="134.0" layoutY="223.0" prefHeight="26.0" prefWidth="325.0" />
+            <TextField layoutX="134.0" layoutY="283.0" prefHeight="26.0" prefWidth="325.0" />
+            <TextField layoutX="174.0" layoutY="343.0" prefHeight="26.0" prefWidth="285.0" />
+            <TextField layoutX="104.0" layoutY="403.0" prefHeight="26.0" prefWidth="355.0" />
+            <TextField layoutX="701.0" layoutY="223.0" prefHeight="26.0" prefWidth="255.0" />
+            <TextField layoutX="611.0" layoutY="283.0" prefHeight="26.0" prefWidth="345.0" />
+            <CheckBox layoutX="560.0" layoutY="355.0" mnemonicParsing="false" text="Spara mina uppgifter" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="588.0" layoutY="490.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="341.0" text="Gå vidare till Betalning">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Line endX="386.0" endY="1.0" layoutX="326.0" layoutY="51.0" startX="-61.0" startY="1.0" />
+            <Circle fill="WHITE" layoutX="262.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="374.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="DODGERBLUE" layoutX="487.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="599.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="712.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="234.0" layoutY="83.0" text="Varukorg" />
+            <Label layoutX="353.0" layoutY="83.0" text="Adress" />
+            <Label layoutX="453.0" layoutY="83.0" text="Leveranstid" />
+            <Label layoutX="572.0" layoutY="83.0" text="Betalning" />
+            <Label layoutX="662.0" layoutY="83.0" text="Orderbekräftelse" />
+            <Label layoutX="256.0" layoutY="39.0" text="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="368.0" layoutY="39.0" text="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="481.0" layoutY="39.0" text="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="593.0" layoutY="39.0" text="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="706.0" layoutY="39.0" text="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="429.0" layoutY="128.0" text="Leveranstid">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <CheckBox layoutX="270.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="450.0" text="Måndag 19 maj 2024 kl 12:00">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </CheckBox>
+            <CheckBox layoutX="270.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="450.0" text="Måndag 19 maj 2024 kl 17:00">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </CheckBox>
+            <CheckBox layoutX="270.0" layoutY="281.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="450.0" text="Tisdag 20 maj 2024 kl 12:00">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </CheckBox>
+            <CheckBox layoutX="270.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="450.0" text="Tisdag 20 maj 2024 kl 17:00">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </CheckBox>
+            <CheckBox layoutX="270.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="450.0" text="Onsdag 21 maj 2024 kl 12:00">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </CheckBox>
+            <CheckBox layoutX="270.0" layoutY="413.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="450.0" text="Onsdag 21 maj 2024 kl 17:00">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="588.0" layoutY="490.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="341.0" text="Betala och beställ">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Line endX="386.0" endY="1.0" layoutX="326.0" layoutY="51.0" startX="-61.0" startY="1.0" />
+            <Circle fill="WHITE" layoutX="262.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="374.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="487.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="DODGERBLUE" layoutX="599.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="712.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="234.0" layoutY="83.0" text="Varukorg" />
+            <Label layoutX="353.0" layoutY="83.0" text="Adress" />
+            <Label layoutX="453.0" layoutY="83.0" text="Leveranstid" />
+            <Label layoutX="572.0" layoutY="83.0" text="Betalning" />
+            <Label layoutX="662.0" layoutY="83.0" text="Orderbekräftelse" />
+            <Label layoutX="256.0" layoutY="39.0" text="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="368.0" layoutY="39.0" text="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="481.0" layoutY="39.0" text="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="593.0" layoutY="39.0" text="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="706.0" layoutY="39.0" text="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="438.0" layoutY="128.0" text="Betalning">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="201.0" text="Kortuppgifter">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="249.0" text="Kortnummer:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="309.0" text="Utgångsdatum:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="369.0" text="CVC:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField layoutX="180.0" layoutY="249.0" prefHeight="26.0" prefWidth="325.0" />
+            <TextField layoutX="195.0" layoutY="309.0" prefHeight="26.0" prefWidth="310.0" />
+            <TextField layoutX="120.0" layoutY="369.0" prefHeight="26.0" prefWidth="385.0" />
+            <Label layoutX="588.0" layoutY="207.0" prefHeight="45.0" prefWidth="286.0" text="Total: 1000kr">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="588.0" layoutY="263.0" text="Leverans: Tisdag 20 maj 2024 kl 12:00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox layoutX="65.0" layoutY="434.0" mnemonicParsing="false" text="Spara mina uppgifter" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="588.0" layoutY="490.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="341.0" text="Återgå till startsidan">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Line endX="386.0" endY="1.0" layoutX="326.0" layoutY="51.0" startX="-61.0" startY="1.0" />
+            <Circle fill="WHITE" layoutX="262.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="374.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="487.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="599.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="DODGERBLUE" layoutX="712.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="234.0" layoutY="83.0" text="Varukorg" />
+            <Label layoutX="353.0" layoutY="83.0" text="Adress" />
+            <Label layoutX="453.0" layoutY="83.0" text="Leveranstid" />
+            <Label layoutX="572.0" layoutY="83.0" text="Betalning" />
+            <Label layoutX="662.0" layoutY="83.0" text="Orderbekräftelse" />
+            <Label layoutX="256.0" layoutY="39.0" text="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="368.0" layoutY="39.0" text="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="481.0" layoutY="39.0" text="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="593.0" layoutY="39.0" text="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="706.0" layoutY="39.0" text="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="404.0" layoutY="128.0" text="Orderbekräftelse">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="230.0" layoutY="210.0" prefHeight="67.0" prefWidth="534.0" text="Tack för din beställning" textAlignment="CENTER">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Label>
+            <Label layoutX="419.0" layoutY="159.0" prefHeight="19.0" prefWidth="137.0" text="Ordernummer: 0001">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="230.0" layoutY="291.0" text="Din beställning levereras Tisdag 20 maj 2024 kl 12:00">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
