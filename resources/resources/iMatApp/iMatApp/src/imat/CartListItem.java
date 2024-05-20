@@ -1,11 +1,11 @@
 package imat;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.fxml.FXML;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCart;
@@ -13,28 +13,25 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class ProductItem extends AnchorPane {
+public class CartListItem extends AnchorPane {
 
     private final ShoppingCart shoppingCart;
-    private double amount;
     private IMatDataHandler controller;
     private Product product;
     private ShoppingItem shoppingItem;
-    @FXML private Label productTitle;
-    @FXML private ImageView productImage;
-    @FXML private Label productPrice;
-    @FXML private Button incrementButton;
-    @FXML private Button decrementButton;
-    @FXML private Button favoriteButton;
-    @FXML private Label amountTitle;
+    @FXML private Label cartProductTitle;
+    @FXML private ImageView cartProductImage;
+    @FXML private Label cartProductPrice;
+    @FXML private Button cartIncrementButton;
+    @FXML private Button cartDecrementButton;
+    @FXML private Label cartAmountLabel;
 
 
-    public ProductItem(Product product, IMatDataHandler controller, MainViewController mainViewController){
-        this.amount = 0;
+    public CartListItem(Product product, IMatDataHandler controller, MainViewController mainViewController){
         this.product = product;
         this.controller = controller;
         this.shoppingCart = controller.getShoppingCart();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProductItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CartListItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -43,13 +40,13 @@ public class ProductItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+//
+        this.cartProductTitle.setText(product.getName());
+        this.cartProductImage.setImage(controller.getFXImage(product));
+        this.cartProductImage.setOnMouseClicked(EventHandler -> {mainViewController.populateDetailView(product);});
+        this.cartIncrementButton.setOnAction(event -> {increment();});
+        this.cartDecrementButton.setOnAction(event -> {decrement(mainViewController);});
 
-        this.productTitle.setText(product.getName());
-        this.productImage.setImage(controller.getFXImage(product));
-        this.productImage.setOnMouseClicked(EventHandler -> {mainViewController.populateDetailView(product);});
-        this.incrementButton.setOnAction(event -> {increment();});
-        this.decrementButton.setOnAction(event -> {decrement();});
-        this.favoriteButton.setOnAction(event -> {favorite();});
 
     }
 
@@ -58,15 +55,17 @@ public class ProductItem extends AnchorPane {
 
 
     }
-    public void decrement() {
+    public void decrement(MainViewController mainController) {
         if (shoppingCart.getItems().isEmpty()) {return;}
         boolean removeItem = false;
         for (ShoppingItem si : shoppingCart.getItems()) {
             if (si.getProduct().equals(product)) {
                 if (si.getAmount() > 1) {
                     Double amount = si.getAmount() - 1;
-                    shoppingCart.removeProduct(product);
-                    shoppingCart.addProduct(product, amount);
+                    si.setAmount(amount);
+                    mainController.populateCart();
+//                    shoppingCart.removeProduct(product);
+//                    shoppingCart.addProduct(product, amount);
                 }
                 else if (si.getAmount() == 1) {
                      removeItem= true;
@@ -77,19 +76,12 @@ public class ProductItem extends AnchorPane {
         if (removeItem) {shoppingCart.removeProduct(product);}
 
     }
-    public void favorite() {
-        if (controller.isFavorite(product)) {controller.removeFavorite(product);
-        this.favoriteButton.setText("♡");}
-        else {controller.addFavorite(product);
-        this.favoriteButton.setText("❤");
-        }
 
-    }
     public void resetAmount() {
-        amountTitle.setText(String.valueOf(0));
+        cartAmountLabel.setText(String.valueOf(0));
     }
     public void setAmount(double amount) {
-        amountTitle.setText(String.valueOf((int) amount));
+        cartAmountLabel.setText(String.valueOf((int) amount));
     }
 
 
