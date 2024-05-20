@@ -3,3 +3,9 @@
       -fx-font-family: "Arial";
       -fx-font-weight: bold;
   }
+
+.small-text{
+    -fx-font-size: 10px;
+    -fx-font-family: "Lucida Sans Unicode";
+}
+

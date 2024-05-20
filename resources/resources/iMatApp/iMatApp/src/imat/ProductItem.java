@@ -28,7 +28,8 @@ public class ProductItem extends AnchorPane {
     @FXML private Button favoriteButton;
     @FXML private Label amountTitle;
 
-    public ProductItem(Product product, IMatDataHandler controller){
+
+    public ProductItem(Product product, IMatDataHandler controller, MainViewController mainViewController){
         this.amount = 0;
         this.product = product;
         this.controller = controller;
@@ -44,7 +45,8 @@ public class ProductItem extends AnchorPane {
         }
 
         this.productTitle.setText(product.getName());
-        //this.productImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(product.getImageName())));
+        this.productImage.setImage(controller.getFXImage(product));
+        this.productImage.setOnMouseClicked(EventHandler -> {mainViewController.populateDetailView(product);});
         this.incrementButton.setOnAction(event -> {increment();});
         this.decrementButton.setOnAction(event -> {decrement();});
         this.favoriteButton.setOnAction(event -> {favorite();});
@@ -84,10 +86,10 @@ public class ProductItem extends AnchorPane {
 
     }
     public void resetAmount() {
-        amountTitle.setText(String.valueOf(0.0));
+        amountTitle.setText(String.valueOf(0));
     }
     public void setAmount(double amount) {
-        amountTitle.setText(String.valueOf(amount));
+        amountTitle.setText(String.valueOf((int) amount));
     }
 
 
