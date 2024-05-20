@@ -33,6 +33,7 @@ public class MainViewController implements Initializable {
     @FXML private Button detailCloseButton;
     @FXML private Button detailIncrementButton;
     @FXML private Button detailDecrementButton;
+    @FXML private Button detailFavoriteButton;
     @FXML private Label detailAmount;
     @FXML private Label detailTitle;
     @FXML private Label detailPrice;
@@ -169,6 +170,8 @@ public class MainViewController implements Initializable {
         updateDetailAmount(product);});
         detailDecrementButton.setOnAction(EventHandler -> {productMap.get(product).decrement();
         updateDetailAmount(product);});
+        detailFavoriteButton.setOnAction(EventHandler -> {toggleFavorite(product);});
+        toggleFavorite(product); toggleFavorite(product);
 
         ProductDetail productDetail = iMatDataHandler.getDetail(product);
         detailBrand.setText(productDetail.getBrand());
@@ -185,7 +188,15 @@ public class MainViewController implements Initializable {
         }
         detailAmount.setText("0");
     }
-
+    public void toggleFavorite(Product product) {
+        if (iMatDataHandler.isFavorite(product)) {
+            iMatDataHandler.removeFavorite(product);
+            this.detailFavoriteButton.setText("♡");
+        } else {
+            iMatDataHandler.addFavorite(product);
+            this.detailFavoriteButton.setText("❤");
+        }
+    }
 
     @FXML
     public void mouseTrap(Event event) {
