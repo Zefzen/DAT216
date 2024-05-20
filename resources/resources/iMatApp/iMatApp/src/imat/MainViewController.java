@@ -5,6 +5,7 @@ import java.beans.EventHandler;
 import java.net.URL;
 import java.util.*;
 
+import com.google.gson.internal.LinkedTreeMap;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -12,24 +13,23 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import se.chalmers.cse.dat216.project.*;
 
 public class MainViewController implements Initializable {
 
-    @FXML
-    Label pathLabel;
-    @FXML
-    private FlowPane productGrid;
-    @FXML
-    private TextField searchBar;
-    @FXML
-    private Accordion category;
+    @FXML private StackPane mainView;
     @FXML private AnchorPane productDetailView;
     @FXML private AnchorPane searchView;
+    @FXML private AnchorPane cartView;
+
+
+    @FXML private FlowPane productGrid;
+    @FXML private TextField searchBar;
+    @FXML private Accordion category;
+    @FXML private ImageView logoImageView;
+    @FXML private Button cartButton;
+
     @FXML private Button detailCloseButton;
     @FXML private Button detailIncrementButton;
     @FXML private Button detailDecrementButton;
@@ -44,21 +44,34 @@ public class MainViewController implements Initializable {
     @FXML private ImageView detailImageView;
     @FXML private AnchorPane detailAnchorPane;
 
+    @FXML private FlowPane cartFlowPane;
+
+
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
     HashMap<Product, ProductItem> productMap = new HashMap<>();
+    HashMap<Product, CartListItem> cartProductMap = new HashMap<>();
     List<List<String>> subCategories;
 
 
     public void initialize(URL url, ResourceBundle rb) {
 
 
-        int n = 0;
+
+        for (int i = 0; i < 10; i++) {
+            cartFlowPane.getChildren().add(new CartListItem(iMatDataHandler.getProducts().getFirst(),
+                    iMatDataHandler, this));
+        }
+
+
+
         List<Product> productList = iMatDataHandler.getProducts();
         for (Product product : productList) {
             ProductItem productItem = new ProductItem(product, iMatDataHandler, this);
             productMap.put(product, productItem);
             productGrid.getChildren().add(productItem);
+            CartListItem cartListItem = new CartListItem(product, iMatDataHandler, this);
+            cartProductMap.put(product, cartListItem);
         }
 
 
@@ -66,6 +79,7 @@ public class MainViewController implements Initializable {
             @Override
             public void shoppingCartChanged(CartEvent cartEvent) {
                 updateAmountLabels();
+                populateCart();
             }
         });
 
@@ -187,6 +201,29 @@ public class MainViewController implements Initializable {
             }
         }
         detailAmount.setText("0");
+    }
+
+    public void populateMain() {
+        searchView.toFront();
+        mainView.toFront();
+        populateGrid(iMatDataHandler.getProducts());
+    }
+
+    public void populateCart() {
+        List<ShoppingItem> shoppingCartList = iMatDataHandler.getShoppingCart().getItems();
+        cartFlowPane.getChildren().clear();
+        for (ShoppingItem shoppingItem : shoppingCartList) {
+            Product product = shoppingItem.getProduct();
+            CartListItem cartListItem = cartProductMap.get(product);
+            cartListItem.setAmount(shoppingItem.getAmount());
+            cartFlowPane.getChildren().add(cartListItem);
+        }
+    }
+
+    public void pressShoppingCart() {
+
+        cartView.toFront();
+        populateCart();
     }
     public void toggleFavorite(Product product) {
         if (iMatDataHandler.isFavorite(product)) {
