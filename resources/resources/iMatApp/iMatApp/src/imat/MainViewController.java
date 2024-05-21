@@ -22,8 +22,6 @@ public class MainViewController implements Initializable {
     @FXML private AnchorPane productDetailView;
     @FXML private AnchorPane searchView;
     @FXML private AnchorPane cartView;
-
-
     @FXML private FlowPane productGrid;
     @FXML private TextField searchBar;
     @FXML private Accordion category;
