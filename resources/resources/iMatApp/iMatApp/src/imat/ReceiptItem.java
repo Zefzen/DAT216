@@ -9,6 +9,9 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class ReceiptItem extends AnchorPane {
 
@@ -35,7 +38,12 @@ public class ReceiptItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 //
-        this.receiptDateLabel.setText(order.getDate().toString());
+        LocalDate date = LocalDate.now();
+        Locale locale = new Locale("sv", "SE");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE d MMMM y");
+        formatter.localizedBy(locale);
+        String receiptDate = date.format(formatter);
+        this.receiptDateLabel.setText(receiptDate);
         double priceSum = 0;
         for (ShoppingItem si: order.getItems()) {
             priceSum += si.getTotal();

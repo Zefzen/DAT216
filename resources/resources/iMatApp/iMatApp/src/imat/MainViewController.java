@@ -2,6 +2,8 @@
 package imat;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 
@@ -104,6 +106,7 @@ public class MainViewController implements Initializable {
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+    CreditCard creditCard = iMatDataHandler.getCreditCard();
     HashMap<Product, ProductItem> productMap = new HashMap<>();
     HashMap<Product, CartListItem> cartProductMap = new HashMap<>();
     HashMap<Product, ReceiptDetailListItem> receiptDetailListItemMap = new HashMap<>();
@@ -308,6 +311,106 @@ public class MainViewController implements Initializable {
         }
     }
 
+    public void populateDeliveryTime() {
+        LocalDate futureDate1 = LocalDate.now().plusDays(1);
+        LocalDate futureDate2 = LocalDate.now().plusDays(2);
+        LocalDate futureDate3 = LocalDate.now().plusDays(3);
+        Locale locale = new Locale("sv", "SE");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE d MMMM y");
+        formatter.localizedBy(locale);
+        String date1 = futureDate1.format(formatter);
+        String date2 = futureDate2.format(formatter);
+        String date3 = futureDate3.format(formatter);
+
+        stringDate1 = date1 + " kl 12:00";
+        stringDate2 = date1 + " kl 17:00";
+        stringDate3 = date2 + " kl 12:00";
+        stringDate4 = date2 + " kl 17:00";
+        stringDate5 = date3 + " kl 12:00";
+        stringDate6 = date3 + " kl 17:00";
+
+        optionDate1.setText(stringDate1);
+        optionDate2.setText(stringDate2);
+        optionDate3.setText(stringDate3);
+        optionDate4.setText(stringDate4);
+        optionDate5.setText(stringDate5);
+        optionDate6.setText(stringDate6);
+
+        deliveryTimeView.toFront();
+    }
+    public String getSelectedDate(){
+        if(optionDate1.isSelected()){
+            return stringDate1;
+        }
+        if(optionDate2.isSelected()){
+            return stringDate2;
+        }
+        if(optionDate3.isSelected()){
+            return stringDate3;
+        }
+        if(optionDate4.isSelected()){
+            return stringDate4;
+        }
+        if(optionDate5.isSelected()){
+            return stringDate5;
+        }
+        if(optionDate6.isSelected()){
+            return stringDate6;
+        }
+        return stringDate1;
+    }
+
+
+        public void PressDeliveryTime() {
+        saveDeliveryInfo();
+        populateDeliveryTime();
+        }
+   public void populateDeliveryInfo() {
+       Customer c = iMatDataHandler.getCustomer();
+       infoFirstName.setText(c.getFirstName());
+       infoLastName.setText(c.getLastName());
+       infoAdress.setText(c.getAddress());
+       infoPostNumber.setText(c.getPostAddress());
+       infoPhone.setText(c.getPhoneNumber());
+       infoMail.setText(c.getEmail());
+
+       deliveryInfoView.toFront();
+
+   }
+    public void populateOrderConfirmed() {
+       confirmedOrderNumberLabel.setText("Ordernummer: " + iMatDataHandler.placeOrder());
+       confirmedOrderDeliveryLabel.setText("Din beställning levereras " + getSelectedDate());
+       orderConfirmedView.toFront();
+
+
+    }
+
+    public void pressOrderConfirmation() {
+        savePayment();
+        populateOrderConfirmed();
+        iMatDataHandler.shutDown();
+    }
+
+    public void populatePayment(){
+        paymentView.toFront();
+        CreditCard cc = iMatDataHandler.getCreditCard();
+        totalPaymentView.setText("Total: " + shoppingCart.getTotal()  +" kr");
+        leveransPaymentView.setText("Leverans: "+ getSelectedDate());
+        kortnummerPaymentView.setText(cc.getCardNumber());
+        EXPMonthPaymentView.setText(valueOf(cc.getValidMonth()));
+        CVCPaymentView.setText(String.valueOf(cc.getVerificationCode()));
+        EXPYearPaymentView.setText(valueOf(cc.getValidYear()));
+    }
+
+    public void savePayment() {
+        CreditCard cc = iMatDataHandler.getCreditCard();
+        cc.setCardNumber(kortnummerPaymentView.getText());
+        cc.setValidMonth(Integer.parseInt(EXPMonthPaymentView.getText()));
+        cc.setValidYear(Integer.parseInt(EXPYearPaymentView.getText()));
+        cc.setVerificationCode(Integer.parseInt(CVCPaymentView.getText()));
+        iMatDataHandler.shutDown();
+    }
+
     public void pressShoppingCart() {
 
         cartView.toFront();
@@ -318,6 +421,27 @@ public class MainViewController implements Initializable {
         receiptView.toFront();
         populateReceiptList();
     }
+
+    public void pressProfile(){
+        updateInfoView.toFront();
+    }
+
+    public void saveDeliveryInfo() {
+        Customer c = iMatDataHandler.getCustomer();
+        c.setFirstName(infoFirstName.getText());
+        c.setLastName(infoLastName.getText());
+        c.setAddress(infoAdress.getText());
+        c.setPostAddress(infoCity.getText());
+        c.setPostCode(infoPostNumber.getText());
+        c.setPhoneNumber(infoPhone.getText());
+        c.setEmail(infoMail.getText());
+        iMatDataHandler.shutDown();
+    }
+
+    public void purchaseAgain() {
+
+    }
+
     public void toggleFavorite(Product product) {
         if (iMatDataHandler.isFavorite(product)) {
             iMatDataHandler.removeFavorite(product);
