@@ -15,6 +15,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import se.chalmers.cse.dat216.project.*;
 
+import static java.lang.String.valueOf;
+
 public class MainViewController implements Initializable {
 
     @FXML private StackPane mainView;
@@ -22,6 +24,11 @@ public class MainViewController implements Initializable {
     @FXML private AnchorPane searchView;
     @FXML private AnchorPane cartView;
     @FXML private AnchorPane receiptView;
+    @FXML private AnchorPane deliveryTimeView;
+    @FXML private AnchorPane deliveryInfoView;
+    @FXML private AnchorPane orderConfirmedView;
+    @FXML private AnchorPane paymentView;
+    @FXML private AnchorPane updateInfoView;
 
     @FXML private FlowPane productGrid;
     @FXML private TextField searchBar;
@@ -52,6 +59,47 @@ public class MainViewController implements Initializable {
     @FXML private FlowPane receiptDetailFlowPane;
     @FXML private Label receiptTotalLabel;
 
+    @FXML private TextField infoFirstName;
+    @FXML private TextField infoLastName;
+    @FXML private TextField infoAdress;
+    @FXML private TextField infoPostNumber;
+    @FXML private TextField infoCity;
+    @FXML private TextField infoPhone;
+    @FXML private TextField infoMail;
+    @FXML private CheckBox infoSaveInfo;
+
+    @FXML private TextField updateNameTextField;
+    @FXML private TextField updateAdressTextField;
+    @FXML private TextField updatePostNumberTextField;
+    @FXML private TextField updateCityTextField;
+    @FXML private TextField updatePhoneTextField;
+    @FXML private TextField updateMailTextField;
+    @FXML private TextField updateCardNumberTextField;
+    @FXML private TextField updateExpDateTextField;
+    @FXML private TextField updateCVCTextField;
+
+    @FXML private Label totalPaymentView;
+    @FXML private Label leveransPaymentView;
+    @FXML private TextField kortnummerPaymentView;
+    @FXML private TextField EXPMonthPaymentView;
+    @FXML private TextField EXPYearPaymentView;
+    @FXML private TextField CVCPaymentView;
+
+    @FXML private Label confirmedOrderNumberLabel;
+    @FXML private Label confirmedOrderDeliveryLabel;
+
+    @FXML private CheckBox optionDate1;
+    @FXML private CheckBox optionDate2;
+    @FXML private CheckBox optionDate3;
+    @FXML private CheckBox optionDate4;
+    @FXML private CheckBox optionDate5;
+    @FXML private CheckBox optionDate6;
+    private String stringDate1;
+    private String stringDate2;
+    private String stringDate3;
+    private String stringDate4;
+    private String stringDate5;
+    private String stringDate6;
 
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -64,8 +112,7 @@ public class MainViewController implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
 
-        cartAddresButton.setOnAction(EventHandler -> {iMatDataHandler.placeOrder();});
-
+        shoppingCart.clear();
         for (int i = 0; i < 10; i++) {
             cartFlowPane.getChildren().add(new CartListItem(iMatDataHandler.getProducts().getFirst(),
                     iMatDataHandler, this));
@@ -203,11 +250,15 @@ public class MainViewController implements Initializable {
         detailOrigin.setText(productDetail.getOrigin());
         detailDescription.setText(productDetail.getDescription());
 
+        updateDetailAmount(product);
+
+
+
     }
     public void updateDetailAmount(Product product) {
         for (ShoppingItem shoppingItem : shoppingCart.getItems()) {
             if (product == shoppingItem.getProduct()) {
-                detailAmount.setText(String.valueOf((int) shoppingItem.getAmount()));
+                detailAmount.setText(valueOf((int) shoppingItem.getAmount()));
                 return;
             }
         }
@@ -215,13 +266,13 @@ public class MainViewController implements Initializable {
     }
 
     public void updateCartTotal() {
-        cartTotalLabel.setText(String.valueOf(shoppingCart.getTotal()));
+        cartTotalLabel.setText("Total: " + valueOf(shoppingCart.getTotal()) + " kr");
         int n = 0;
         for (ShoppingItem si: shoppingCart.getItems()) {
             n += si.getAmount();
         }
-        cartAmountLabel.setText(String.valueOf(n));
-        receiptTotalLabel.setText(String.valueOf(n));
+        cartAmountLabel.setText("Antal: " + valueOf(n));
+        receiptTotalLabel.setText(valueOf(n));
     }
 
     public void populateMain() {

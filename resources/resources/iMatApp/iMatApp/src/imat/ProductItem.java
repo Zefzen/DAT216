@@ -22,7 +22,7 @@ public class ProductItem extends AnchorPane {
     private ShoppingItem shoppingItem;
     @FXML private Label productTitle;
     @FXML private ImageView productImage;
-    @FXML private Label productPrice;
+    @FXML private Label priceTitle;
     @FXML private Button incrementButton;
     @FXML private Button decrementButton;
     @FXML private Button favoriteButton;
@@ -45,11 +45,12 @@ public class ProductItem extends AnchorPane {
         }
 
         this.productTitle.setText(product.getName());
-        this.productImage.setImage(controller.getFXImage(product));
+        this.productImage.setImage(controller.getFXImage(product, 200, 137));
         this.productImage.setOnMouseClicked(EventHandler -> {mainViewController.populateDetailView(product);});
         this.incrementButton.setOnAction(event -> {increment();});
         this.decrementButton.setOnAction(event -> {decrement();});
         this.favoriteButton.setOnAction(event -> {favorite();});
+        this.priceTitle.setText(String.valueOf(product.getPrice()) + " kr");
 
     }
 
