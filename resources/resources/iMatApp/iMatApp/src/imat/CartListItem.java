@@ -63,9 +63,7 @@ public class CartListItem extends AnchorPane {
                 if (si.getAmount() > 1) {
                     Double amount = si.getAmount() - 1;
                     si.setAmount(amount);
-                    mainController.populateCart();
-//                    shoppingCart.removeProduct(product);
-//                    shoppingCart.addProduct(product, amount);
+                    shoppingCart.fireShoppingCartChanged(si, true);
                 }
                 else if (si.getAmount() == 1) {
                      removeItem= true;

@@ -1,11 +1,10 @@
 
 package imat;
 
-import java.beans.EventHandler;
 import java.net.URL;
 import java.util.*;
 
-import com.google.gson.internal.LinkedTreeMap;
+
 import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -22,7 +21,7 @@ public class MainViewController implements Initializable {
     @FXML private AnchorPane productDetailView;
     @FXML private AnchorPane searchView;
     @FXML private AnchorPane cartView;
-
+    @FXML private AnchorPane receiptView;
 
     @FXML private FlowPane productGrid;
     @FXML private TextField searchBar;
@@ -45,18 +44,27 @@ public class MainViewController implements Initializable {
     @FXML private AnchorPane detailAnchorPane;
 
     @FXML private FlowPane cartFlowPane;
+    @FXML private Label cartTotalLabel;
+    @FXML private Label cartAmountLabel;
+    @FXML private Button cartAddresButton;
+
+    @FXML private FlowPane receiptListFlowPane;
+    @FXML private FlowPane receiptDetailFlowPane;
+    @FXML private Label receiptTotalLabel;
+
 
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
     HashMap<Product, ProductItem> productMap = new HashMap<>();
     HashMap<Product, CartListItem> cartProductMap = new HashMap<>();
+    HashMap<Product, ReceiptDetailListItem> receiptDetailListItemMap = new HashMap<>();
     List<List<String>> subCategories;
 
 
     public void initialize(URL url, ResourceBundle rb) {
 
-
+        cartAddresButton.setOnAction(EventHandler -> {iMatDataHandler.placeOrder();});
 
         for (int i = 0; i < 10; i++) {
             cartFlowPane.getChildren().add(new CartListItem(iMatDataHandler.getProducts().getFirst(),
@@ -72,6 +80,8 @@ public class MainViewController implements Initializable {
             productGrid.getChildren().add(productItem);
             CartListItem cartListItem = new CartListItem(product, iMatDataHandler, this);
             cartProductMap.put(product, cartListItem);
+            ReceiptDetailListItem receipeDetailListItem = new ReceiptDetailListItem(product, iMatDataHandler);
+            receiptDetailListItemMap.put(product, receipeDetailListItem);
         }
 
 
@@ -80,6 +90,7 @@ public class MainViewController implements Initializable {
             public void shoppingCartChanged(CartEvent cartEvent) {
                 updateAmountLabels();
                 populateCart();
+                updateCartTotal();
             }
         });
 
@@ -203,6 +214,16 @@ public class MainViewController implements Initializable {
         detailAmount.setText("0");
     }
 
+    public void updateCartTotal() {
+        cartTotalLabel.setText(String.valueOf(shoppingCart.getTotal()));
+        int n = 0;
+        for (ShoppingItem si: shoppingCart.getItems()) {
+            n += si.getAmount();
+        }
+        cartAmountLabel.setText(String.valueOf(n));
+        receiptTotalLabel.setText(String.valueOf(n));
+    }
+
     public void populateMain() {
         searchView.toFront();
         mainView.toFront();
@@ -220,10 +241,31 @@ public class MainViewController implements Initializable {
         }
     }
 
+    public void populateReceiptList() {
+        receiptListFlowPane.getChildren().clear();
+        for (Order order: iMatDataHandler.getOrders()) {
+            receiptListFlowPane.getChildren().add(new ReceiptItem(order, iMatDataHandler, this));
+        }
+    }
+
+    public void populateReceiptDetailList(Order order) {
+        receiptDetailFlowPane.getChildren().clear();
+        for (ShoppingItem si: order.getItems()) {
+            ReceiptDetailListItem rd = receiptDetailListItemMap.get(si.getProduct());
+            rd.setAmount(si.getAmount());
+            receiptDetailFlowPane.getChildren().add(rd);
+        }
+    }
+
     public void pressShoppingCart() {
 
         cartView.toFront();
         populateCart();
+    }
+
+    public void pressReceipt() {
+        receiptView.toFront();
+        populateReceiptList();
     }
     public void toggleFavorite(Product product) {
         if (iMatDataHandler.isFavorite(product)) {

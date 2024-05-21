@@ -552,7 +552,7 @@
                   <MenuButton layoutX="781.0" layoutY="20.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="94.0" text="Profil">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Inköpslistor" />
-                        <MenuItem mnemonicParsing="false" text="Tidigare köp" />
+                        <MenuItem mnemonicParsing="false" onAction="#pressReceipt" text="Tidigare köp" />
                         <MenuItem mnemonicParsing="false" text="Uppgifter" />
                      </items>
                   </MenuButton>
@@ -563,7 +563,7 @@
       </StackPane>
       <AnchorPane fx:id="cartView" layoutX="1.0" layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
          <children>
-            <Button layoutX="588.0" layoutY="490.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="321.0" text="Gå vidare till Adress">
+            <Button fx:id="cartAddresButton" layoutX="588.0" layoutY="490.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="321.0" text="Gå vidare till Adress">
                <font>
                   <Font size="30.0" />
                </font>
@@ -614,16 +614,49 @@
                   <FlowPane fx:id="cartFlowPane" prefHeight="312.0" prefWidth="805.0" />
                </content>
             </ScrollPane>
-            <Label layoutX="105.0" layoutY="490.0" prefHeight="40.0" prefWidth="192.0" text="22 varor">
+            <Label fx:id="cartAmountLabel" layoutX="105.0" layoutY="490.0" prefHeight="40.0" prefWidth="192.0" text="22 varor">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="105.0" layoutY="542.0" text="Total: 1000 kr">
+            <Label fx:id="cartTotalLabel" layoutX="105.0" layoutY="542.0" text="Total: 1000 kr">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="receiptView" layoutY="96.0" maxHeight="700.0" maxWidth="1010.0" minHeight="602.0" minWidth="1000.0" prefHeight="602.0" prefWidth="1000.0" style="-fx-background-color: FFFFFF;" stylesheets="@imat_app.css">
+         <children>
+            <Label fx:id="pathLabel" alignment="CENTER" layoutX="115.0" layoutY="190.0" prefHeight="17.0" prefWidth="771.0" styleClass="text-sample" text="Label" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="114.0" />
+            <AnchorPane layoutX="-11.0" layoutY="78.0" prefHeight="627.0" prefWidth="1010.0">
+               <children>
+                  <SplitPane fx:id="shoppingListSplitPane" dividerPositions="0.47010647010647005" layoutX="22.0" layoutY="-6.0" prefHeight="523.0" prefWidth="978.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="535.0" prefWidth="508.0">
+                           <children>
+                              <ScrollPane layoutX="85.0" layoutY="103.0" prefHeight="522.4" prefWidth="485.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <content>
+                                    <FlowPane fx:id="receiptListFlowPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="519.0" prefWidth="453.0" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="521.0" prefWidth="557.0">
+                           <children>
+                              <ScrollPane prefHeight="460.0" prefWidth="485.0">
+                                 <content>
+                                    <FlowPane fx:id="receiptDetailFlowPane" prefHeight="458.0" prefWidth="484.0" />
+                                 </content>
+                              </ScrollPane>
+                              <Button fx:id="buyAgainButton" layoutX="299.0" layoutY="463.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="101.0" text="Köp igen" />
+                              <Label fx:id="receiptTotalLabel" layoutX="418.0" layoutY="480.0" prefHeight="18.0" prefWidth="61.0" text="Label" />
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
