@@ -68,16 +68,17 @@ public class MainViewController implements Initializable {
     @FXML private TextField infoCity;
     @FXML private TextField infoPhone;
     @FXML private TextField infoMail;
-    @FXML private CheckBox infoSaveInfo;
 
-    @FXML private TextField updateNameTextField;
+    @FXML private TextField updateFirstNameTextField;
+    @FXML private TextField updateLastNameTextField;
     @FXML private TextField updateAdressTextField;
     @FXML private TextField updatePostNumberTextField;
     @FXML private TextField updateCityTextField;
     @FXML private TextField updatePhoneTextField;
     @FXML private TextField updateMailTextField;
     @FXML private TextField updateCardNumberTextField;
-    @FXML private TextField updateExpDateTextField;
+    @FXML private TextField updateExpMonthTextField;
+    @FXML private TextField updateExpYearTextField;
     @FXML private TextField updateCVCTextField;
 
     @FXML private Label totalPaymentView;
@@ -115,7 +116,7 @@ public class MainViewController implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
 
-        shoppingCart.clear();
+
         for (int i = 0; i < 10; i++) {
             cartFlowPane.getChildren().add(new CartListItem(iMatDataHandler.getProducts().getFirst(),
                     iMatDataHandler, this));
@@ -126,6 +127,7 @@ public class MainViewController implements Initializable {
         List<Product> productList = iMatDataHandler.getProducts();
         for (Product product : productList) {
             ProductItem productItem = new ProductItem(product, iMatDataHandler, this);
+            productItem.favorite(); productItem.favorite(); // FXIA HJÄRTAT
             productMap.put(product, productItem);
             productGrid.getChildren().add(productItem);
             CartListItem cartListItem = new CartListItem(product, iMatDataHandler, this);
@@ -143,6 +145,11 @@ public class MainViewController implements Initializable {
                 updateCartTotal();
             }
         });
+
+        shoppingCart.clear();
+        populateMain();
+        updateCartTotal();
+        updateAmountLabels();
 
 
         this.subCategories = Arrays.asList(
@@ -199,6 +206,9 @@ public class MainViewController implements Initializable {
     public void updateSearchResult() {
         List<Product> searchResult = iMatDataHandler.findProducts(searchBar.getText());
         populateGrid(searchResult);
+        searchView.toFront();
+        mainView.toFront();
+
     }
 
     public void populateGrid(List<Product> productList) {
@@ -297,7 +307,7 @@ public class MainViewController implements Initializable {
 
     public void populateReceiptList() {
         receiptListFlowPane.getChildren().clear();
-        for (Order order: iMatDataHandler.getOrders()) {
+        for (Order order: iMatDataHandler.getOrders().reversed()) {
             receiptListFlowPane.getChildren().add(new ReceiptItem(order, iMatDataHandler, this));
         }
     }
@@ -370,15 +380,16 @@ public class MainViewController implements Initializable {
        infoFirstName.setText(c.getFirstName());
        infoLastName.setText(c.getLastName());
        infoAdress.setText(c.getAddress());
-       infoPostNumber.setText(c.getPostAddress());
+       infoPostNumber.setText(c.getPostCode());
        infoPhone.setText(c.getPhoneNumber());
        infoMail.setText(c.getEmail());
+       infoCity.setText(c.getPostAddress());
 
        deliveryInfoView.toFront();
 
    }
     public void populateOrderConfirmed() {
-       confirmedOrderNumberLabel.setText("Ordernummer: " + iMatDataHandler.placeOrder());
+       confirmedOrderNumberLabel.setText("Ordernummer: " + iMatDataHandler.placeOrder().getOrderNumber());
        confirmedOrderDeliveryLabel.setText("Din beställning levereras " + getSelectedDate());
        orderConfirmedView.toFront();
 
@@ -400,6 +411,41 @@ public class MainViewController implements Initializable {
         EXPMonthPaymentView.setText(valueOf(cc.getValidMonth()));
         CVCPaymentView.setText(String.valueOf(cc.getVerificationCode()));
         EXPYearPaymentView.setText(valueOf(cc.getValidYear()));
+    }
+
+    public void populateUpdateInfo(){
+        updateInfoView.toFront();
+        CreditCard cc = iMatDataHandler.getCreditCard();
+        Customer customer = iMatDataHandler.getCustomer();
+        updateFirstNameTextField.setText(customer.getFirstName());
+        updateLastNameTextField.setText(customer.getLastName());
+        updateAdressTextField.setText(customer.getAddress());
+        updatePostNumberTextField.setText(customer.getPostCode());
+        updateCityTextField.setText(customer.getPostAddress());
+        updatePhoneTextField.setText(customer.getPhoneNumber());
+        updateMailTextField.setText(customer.getEmail());
+        updateCardNumberTextField.setText(cc.getCardNumber());
+        updateExpMonthTextField.setText(String.valueOf(cc.getValidMonth()));
+        updateExpYearTextField.setText(String.valueOf(cc.getValidYear()));
+        updateCVCTextField.setText(String.valueOf(cc.getVerificationCode()));
+    }
+
+    public void saveUpdateInfo(){
+        CreditCard cc = iMatDataHandler.getCreditCard();
+        Customer customer = iMatDataHandler.getCustomer();
+        customer.setFirstName(updateFirstNameTextField.getText());
+        customer.setLastName(updateLastNameTextField.getText());
+        customer.setAddress(updateAdressTextField.getText());
+        customer.setPostCode(updatePostNumberTextField.getText());
+        customer.setPostAddress(updateCityTextField.getText());
+        customer.setPhoneNumber(updatePhoneTextField.getText());
+        customer.setEmail(updateMailTextField.getText());
+        cc.setCardNumber(updateCardNumberTextField.getText());
+        cc.setValidMonth(Integer.parseInt(updateExpMonthTextField.getText()));
+        cc.setValidYear(Integer.parseInt(updateExpYearTextField.getText()));
+        cc.setVerificationCode(Integer.parseInt(updateCVCTextField.getText()));
+        iMatDataHandler.shutDown();
+        populateMain();
     }
 
     public void savePayment() {
