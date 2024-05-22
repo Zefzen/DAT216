@@ -49,7 +49,7 @@ public class ProductItem extends AnchorPane {
         this.productImage.setOnMouseClicked(EventHandler -> {mainViewController.populateDetailView(product);});
         this.incrementButton.setOnAction(event -> {increment();});
         this.decrementButton.setOnAction(event -> {decrement();});
-        this.favoriteButton.setOnAction(event -> {favorite();});
+        this.favoriteButton.setOnAction(event -> {mainViewController.toggleFavorite(product);});
         this.priceTitle.setText(String.valueOf(product.getPrice()) + " " + product.getUnit());
 
     }
@@ -78,14 +78,12 @@ public class ProductItem extends AnchorPane {
         if (removeItem) {shoppingCart.removeProduct(product);}
 
     }
-    public void favorite() {
-        if (controller.isFavorite(product)) {controller.removeFavorite(product);
-        this.favoriteButton.setText("♡");}
-        else {controller.addFavorite(product);
+    public void setFavorite() {
         this.favoriteButton.setText("❤");
-        }
-
     }
+    public void removeFavorite() {
+            this.favoriteButton.setText("♡");}
+
     public void resetAmount() {
         amountTitle.setText(String.valueOf(0));
     }

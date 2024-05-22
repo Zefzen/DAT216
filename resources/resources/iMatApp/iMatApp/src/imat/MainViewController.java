@@ -129,7 +129,7 @@ public class MainViewController implements Initializable {
         List<Product> productList = iMatDataHandler.getProducts();
         for (Product product : productList) {
             ProductItem productItem = new ProductItem(product, iMatDataHandler, this);
-            productItem.favorite(); productItem.favorite(); // FXIA HJÄRTAT
+
             productMap.put(product, productItem);
             productGrid.getChildren().add(productItem);
             CartListItem cartListItem = new CartListItem(product, iMatDataHandler, this);
@@ -287,7 +287,6 @@ public class MainViewController implements Initializable {
             n += si.getAmount();
         }
         cartAmountLabel.setText("Antal: " + valueOf(n));
-        receiptTotalLabel.setText(valueOf(n));
     }
 
     public void populateMain() {
@@ -309,8 +308,13 @@ public class MainViewController implements Initializable {
 
     public void populateReceiptList() {
         receiptListFlowPane.getChildren().clear();
+        int i = 0;
         for (Order order: iMatDataHandler.getOrders().reversed()) {
-            receiptListFlowPane.getChildren().add(new ReceiptItem(order, iMatDataHandler, this));
+            ReceiptItem ri = new ReceiptItem(order, iMatDataHandler, this);
+            if (i % 2 == 1) {
+            ri.setStyle("-fx-background-color: #EEEEEE;"); }
+            receiptListFlowPane.getChildren().add(ri);
+            i ++;
         }
     }
 
@@ -500,10 +504,13 @@ public class MainViewController implements Initializable {
     public void toggleFavorite(Product product) {
         if (iMatDataHandler.isFavorite(product)) {
             iMatDataHandler.removeFavorite(product);
-            this.detailFavoriteButton.setText("♡");
+            this.detailFavoriteImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+            productMap.get(product).removeFavorite();
         } else {
             iMatDataHandler.addFavorite(product);
-            this.detailFavoriteButton.setText("❤");
+            String iconPath = "imat/resources/heart_full.png";
+            this.detailFavoriteImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+            productMap.get(product).setFavorite();
         }
     }
 
