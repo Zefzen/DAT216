@@ -117,7 +117,7 @@ public class MainViewController implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
 
-
+        iMatDataHandler.resetFirstRun();
         for (int i = 0; i < 10; i++) {
             cartFlowPane.getChildren().add(new CartListItem(iMatDataHandler.getProducts().getFirst(),
                     iMatDataHandler, this));
@@ -491,7 +491,7 @@ public class MainViewController implements Initializable {
 
     public void purchaseAgain(Order order) {
         for(ShoppingItem si: order.getItems()) {
-            shoppingCart.addItem(si,true);
+            shoppingCart.addProduct(si.getProduct(),si.getAmount());
         }
 
     }

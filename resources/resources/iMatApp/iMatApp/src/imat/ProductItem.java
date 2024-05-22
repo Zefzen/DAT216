@@ -50,7 +50,7 @@ public class ProductItem extends AnchorPane {
         this.incrementButton.setOnAction(event -> {increment();});
         this.decrementButton.setOnAction(event -> {decrement();});
         this.favoriteButton.setOnAction(event -> {favorite();});
-        this.priceTitle.setText(String.valueOf(product.getPrice()) + " kr");
+        this.priceTitle.setText(String.valueOf(product.getPrice()) + " " + product.getUnit());
 
     }
 
