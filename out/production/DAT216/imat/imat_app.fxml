@@ -582,7 +582,7 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="detailDescription" layoutX="468.0" layoutY="227.0" prefHeight="209.0" prefWidth="316.0" text="Hej hej detta är väldigt god mellanmjölk för dig som vill ha mellanmjölk. " wrapText="true" />
+                        <Label fx:id="detailDescription" layoutX="468.0" layoutY="227.0" prefHeight="209.0" prefWidth="316.0" styleClass="medium-text" text="Hej hej detta är väldigt god mellanmjölk för dig som vill ha mellanmjölk. " wrapText="true" />
                         <Label fx:id="detailOrigin" layoutX="468.0" layoutY="160.0" prefHeight="26.0" prefWidth="114.0" text="Från Sverige">
                            <font>
                               <Font size="16.0" />
