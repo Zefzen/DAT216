@@ -48,7 +48,7 @@ public class ReceiptDetailListItem extends AnchorPane {
 
     public void setAmount(double amount) {
         receipeAmountLabel.setText(String.valueOf((int) amount));
-        receipeItemTotalLabel.setText(String.valueOf(amount*product.getPrice()));
+        receipeItemTotalLabel.setText(String.format ("%.2f",amount*product.getPrice()));
     }
 
 

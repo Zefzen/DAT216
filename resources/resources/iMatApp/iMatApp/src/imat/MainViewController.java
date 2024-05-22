@@ -60,6 +60,7 @@ public class MainViewController implements Initializable {
     @FXML private FlowPane receiptListFlowPane;
     @FXML private FlowPane receiptDetailFlowPane;
     @FXML private Label receiptTotalLabel;
+    @FXML private Button buyAgainButton;
 
     @FXML private TextField infoFirstName;
     @FXML private TextField infoLastName;
@@ -279,7 +280,7 @@ public class MainViewController implements Initializable {
     }
 
     public void updateCartTotal() {
-        cartTotalLabel.setText("Total: " + valueOf(shoppingCart.getTotal()) + " kr");
+        cartTotalLabel.setText("Total: " + String.format ("%.2f",shoppingCart.getTotal() ) + " kr");
         int n = 0;
         for (ShoppingItem si: shoppingCart.getItems()) {
             n += si.getAmount();
@@ -314,11 +315,15 @@ public class MainViewController implements Initializable {
 
     public void populateReceiptDetailList(Order order) {
         receiptDetailFlowPane.getChildren().clear();
+        buyAgainButton.setOnAction(EventHandler -> {purchaseAgain(order);});
+        double total = 0;
         for (ShoppingItem si: order.getItems()) {
             ReceiptDetailListItem rd = receiptDetailListItemMap.get(si.getProduct());
             rd.setAmount(si.getAmount());
+            total += si.getTotal();
             receiptDetailFlowPane.getChildren().add(rd);
         }
+        receiptTotalLabel.setText(String.format ("%.2f",total) + " kr");
     }
 
     public void populateDeliveryTime() {
@@ -484,7 +489,10 @@ public class MainViewController implements Initializable {
         iMatDataHandler.shutDown();
     }
 
-    public void purchaseAgain() {
+    public void purchaseAgain(Order order) {
+        for(ShoppingItem si: order.getItems()) {
+            shoppingCart.addItem(si,true);
+        }
 
     }
 

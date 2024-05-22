@@ -48,7 +48,7 @@ public class ReceiptItem extends AnchorPane {
         for (ShoppingItem si: order.getItems()) {
             priceSum += si.getTotal();
         }
-        this.receiptPriceLabel.setText(String.valueOf(priceSum) + " kr");
+        this.receiptPriceLabel.setText(String.format("%.2f", priceSum) + " kr");
         this.receiptAnchorPane.setOnMouseClicked(EventHandler -> {
             mainViewController.populateReceiptDetailList(order);});
 
