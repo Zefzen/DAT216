@@ -13,9 +13,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import se.chalmers.cse.dat216.project.*;
+
+import javax.swing.*;
 
 import static java.lang.String.valueOf;
 
@@ -114,6 +117,7 @@ public class MainViewController implements Initializable {
     HashMap<Product, CartListItem> cartProductMap = new HashMap<>();
     HashMap<Product, ReceiptDetailListItem> receiptDetailListItemMap = new HashMap<>();
     List<List<String>> subCategories;
+    @FXML private ImageView detailFavoriteImage;
 
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -415,7 +419,7 @@ public class MainViewController implements Initializable {
     public void populatePayment(){
         paymentView.toFront();
         CreditCard cc = iMatDataHandler.getCreditCard();
-        totalPaymentView.setText("Total: " + shoppingCart.getTotal()  +" kr");
+        totalPaymentView.setText("Total: " + String.format("%.2f", shoppingCart.getTotal())  +" kr");
         leveransPaymentView.setText("Leverans: "+ getSelectedDate());
         kortnummerPaymentView.setText(cc.getCardNumber());
         EXPMonthPaymentView.setText(valueOf(cc.getValidMonth()));
@@ -503,6 +507,7 @@ public class MainViewController implements Initializable {
 
     public void toggleFavorite(Product product) {
         if (iMatDataHandler.isFavorite(product)) {
+            String iconPath = "imat/resources/heart_empty.png";
             iMatDataHandler.removeFavorite(product);
             this.detailFavoriteImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
             productMap.get(product).removeFavorite();
