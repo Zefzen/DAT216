@@ -44,3 +44,6 @@
     -fx-background-color:  #e7d5f8;
     -fx-background-radius: 30;
 }
+.ReceiptButton:hover{
+    -fx-background-color:  #af7ede;
+}

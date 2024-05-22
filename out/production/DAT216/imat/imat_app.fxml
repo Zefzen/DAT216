@@ -388,6 +388,80 @@
             <Button layoutX="64.0" layoutY="516.0" mnemonicParsing="false" onAction="#PressDeliveryTimeBackwards" prefHeight="51.0" prefWidth="120.0" styleClass="Button3" text="Gå tillbaka" />
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="cartView" layoutX="1.0" layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="cartAddresButton" layoutX="588.0" layoutY="490.0" mnemonicParsing="false" onAction="#populateDeliveryInfo" prefHeight="80.0" prefWidth="321.0" styleClass="Button3" text="Gå vidare till Adress">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Line endX="386.0" endY="1.0" layoutX="326.0" layoutY="51.0" startX="-61.0" startY="1.0" />
+            <Circle fill="#9438bc" layoutX="262.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="374.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="487.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="599.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="712.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="234.0" layoutY="83.0" text="Varukorg" />
+            <Label layoutX="353.0" layoutY="83.0" text="Adress" />
+            <Label layoutX="453.0" layoutY="83.0" text="Leveranstid" />
+            <Label layoutX="572.0" layoutY="83.0" text="Betalning" />
+            <Label layoutX="662.0" layoutY="83.0" text="Orderbekräftelse" />
+            <Label layoutX="256.0" layoutY="39.0" mouseTransparent="true" text="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="368.0" layoutY="39.0" mouseTransparent="true" text="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="481.0" layoutY="39.0" mouseTransparent="true" text="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="593.0" layoutY="39.0" mouseTransparent="true" text="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="706.0" layoutY="39.0" mouseTransparent="true" text="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="440.0" layoutY="126.0" text="Varukorg">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" layoutX="105.0" layoutY="163.0" prefHeight="313.0" prefWidth="807.0">
+               <content>
+                  <FlowPane fx:id="cartFlowPane" prefHeight="312.0" prefWidth="805.0" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="cartAmountLabel" layoutX="105.0" layoutY="490.0" prefHeight="40.0" prefWidth="192.0" text="22 varor">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="cartTotalLabel" layoutX="105.0" layoutY="542.0" text="Total: 1000 kr">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="cartDeleteAllButton" ellipsisString="" layoutX="494.0" layoutY="489.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="76.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="60.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" x="100.0">
+                     <image>
+                        <Image url="@resources/trashCan.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="deliveryInfoView" layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
          <children>
             <Button layoutX="536.0" layoutY="490.0" mnemonicParsing="false" onAction="#PressDeliveryTime" prefHeight="80.0" prefWidth="394.0" styleClass="Button3" text="Gå vidare till Leveranstid">
@@ -487,7 +561,7 @@
                <children>
                   <AnchorPane fx:id="detailAnchorPane" layoutX="80.0" layoutY="70.0" onMouseClicked="#mouseTrap" prefHeight="541.0" prefWidth="848.0" style="-fx-background-color: white;">
                      <children>
-                        <Button fx:id="detailCloseButton" layoutX="776.0" layoutY="3.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="61.0" styleClass="Button3" text="Stäng" />
+                        <Button fx:id="detailCloseButton" layoutX="763.0" layoutY="3.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="75.0" styleClass="Button3" text="Stäng" />
                         <ImageView fx:id="detailImageView" fitHeight="470.0" fitWidth="375.0" layoutX="36.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/logo.png" />
@@ -498,18 +572,18 @@
                               <Font size="44.0" />
                            </font>
                         </Label>
-                        <Label fx:id="detailNumber" layoutX="653.0" layoutY="155.0" prefHeight="30.0" prefWidth="138.0" text="ID-Nummer: 12345">
+                        <Label fx:id="detailNumber" alignment="CENTER_RIGHT" layoutX="653.0" layoutY="155.0" prefHeight="30.0" prefWidth="138.0" text="ID-Nummer: 12345">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="detailBrand" layoutX="468.0" layoutY="187.0" prefHeight="20.0" prefWidth="98.0" text="Arla">
+                        <Label fx:id="detailBrand" layoutX="468.0" layoutY="187.0" prefHeight="26.0" prefWidth="114.0" text="Arla">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
                         <Label fx:id="detailDescription" layoutX="468.0" layoutY="227.0" prefHeight="209.0" prefWidth="316.0" text="Hej hej detta är väldigt god mellanmjölk för dig som vill ha mellanmjölk. " wrapText="true" />
-                        <Label fx:id="detailOrigin" layoutX="468.0" layoutY="160.0" text="Från Sverige">
+                        <Label fx:id="detailOrigin" layoutX="468.0" layoutY="160.0" prefHeight="26.0" prefWidth="114.0" text="Från Sverige">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -537,7 +611,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="searchView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="searchView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: f4ebfc;">
                <children>
                   <SplitPane dividerPositions="0.2" layoutY="87.0" prefHeight="613.0" prefWidth="1000.0">
                     <items>
@@ -669,79 +743,5 @@
             </AnchorPane>
          </children>
       </StackPane>
-      <AnchorPane fx:id="cartView" layoutX="1.0" layoutY="85.0" prefHeight="614.0" prefWidth="1003.0" style="-fx-background-color: white;">
-         <children>
-            <Button fx:id="cartAddresButton" layoutX="588.0" layoutY="490.0" mnemonicParsing="false" onAction="#populateDeliveryInfo" prefHeight="80.0" prefWidth="321.0" styleClass="Button3" text="Gå vidare till Adress">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Button>
-            <Line endX="386.0" endY="1.0" layoutX="326.0" layoutY="51.0" startX="-61.0" startY="1.0" />
-            <Circle fill="#9438bc" layoutX="262.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="WHITE" layoutX="374.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="WHITE" layoutX="487.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="WHITE" layoutX="599.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="WHITE" layoutX="712.0" layoutY="52.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
-            <Label layoutX="234.0" layoutY="83.0" text="Varukorg" />
-            <Label layoutX="353.0" layoutY="83.0" text="Adress" />
-            <Label layoutX="453.0" layoutY="83.0" text="Leveranstid" />
-            <Label layoutX="572.0" layoutY="83.0" text="Betalning" />
-            <Label layoutX="662.0" layoutY="83.0" text="Orderbekräftelse" />
-            <Label layoutX="256.0" layoutY="39.0" mouseTransparent="true" text="1">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="368.0" layoutY="39.0" mouseTransparent="true" text="2">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="481.0" layoutY="39.0" mouseTransparent="true" text="3">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="593.0" layoutY="39.0" mouseTransparent="true" text="4">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="706.0" layoutY="39.0" mouseTransparent="true" text="5">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="440.0" layoutY="126.0" text="Varukorg">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <ScrollPane hbarPolicy="NEVER" layoutX="105.0" layoutY="163.0" prefHeight="313.0" prefWidth="807.0">
-               <content>
-                  <FlowPane fx:id="cartFlowPane" prefHeight="312.0" prefWidth="805.0" />
-               </content>
-            </ScrollPane>
-            <Label fx:id="cartAmountLabel" layoutX="105.0" layoutY="490.0" prefHeight="40.0" prefWidth="192.0" text="22 varor">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label fx:id="cartTotalLabel" layoutX="105.0" layoutY="542.0" text="Total: 1000 kr">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Button fx:id="cartDeleteAllButton" ellipsisString="" layoutX="494.0" layoutY="489.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="76.0" style="-fx-background-color: transparent;">
-               <graphic>
-                  <ImageView fitHeight="66.0" fitWidth="60.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" x="100.0">
-                     <image>
-                        <Image url="@resources/trashCan.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-         </children>
-      </AnchorPane>
    </children>
 </AnchorPane>

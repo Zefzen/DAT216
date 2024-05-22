@@ -332,7 +332,8 @@ public class MainViewController implements Initializable {
         for (Order order: iMatDataHandler.getOrders().reversed()) {
             ReceiptItem ri = new ReceiptItem(order, iMatDataHandler, this);
             if (i % 2 == 1) {
-            ri.setStyle("-fx-background-color: #EEEEEE;"); }
+            ri.setStyle("-fx-background-color: #e4cbfc;"); }
+            else {ri.setStyle("-fx-background-color: #e7d5f8;");}
             receiptListFlowPane.getChildren().add(ri);
             i ++;
         }
