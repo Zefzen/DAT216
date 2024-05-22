@@ -28,6 +28,9 @@
     -fx-font-size: 30;
     -fx-background-radius: 40;
 }
+.Button:hover{
+    -fx-background-color:  #af7ede;
+}
 
 .Button2{
     -fx-background-color: #FFFFFF;
@@ -43,6 +46,9 @@
 .Button3{
     -fx-background-color:  #e7d5f8;
     -fx-background-radius: 30;
+}
+.Button3:hover{
+    -fx-background-color:  #af7ede;
 }
 .ReceiptButton:hover{
     -fx-background-color:  #af7ede;

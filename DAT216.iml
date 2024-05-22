@@ -10,6 +10,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="projectbackend" level="project" />
     <orderEntry type="library" name="ProductEditor" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
     <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
