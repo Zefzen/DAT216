@@ -3,6 +3,7 @@ package imat;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXML;
@@ -27,6 +28,7 @@ public class ProductItem extends AnchorPane {
     @FXML private Button decrementButton;
     @FXML private Button favoriteButton;
     @FXML private Label amountTitle;
+    @FXML private ImageView favoriteImage;
 
 
     public ProductItem(Product product, IMatDataHandler controller, MainViewController mainViewController){
@@ -79,10 +81,12 @@ public class ProductItem extends AnchorPane {
 
     }
     public void setFavorite() {
-        this.favoriteButton.setText("❤");
+        String iconPath = "imat/resources/heart_full.png";
+        this.favoriteImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
     }
     public void removeFavorite() {
-            this.favoriteButton.setText("♡");}
+        String iconPath = "imat/resources/heart_empty.png";
+            this.favoriteImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));}
 
     public void resetAmount() {
         amountTitle.setText(String.valueOf(0));

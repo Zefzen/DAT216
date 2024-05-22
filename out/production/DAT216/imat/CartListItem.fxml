@@ -20,22 +20,10 @@
                <Font size="20.0" />
             </font>
          </Label>
-         <Label fx:id="cartProductPrice" layoutX="108.0" layoutY="40.0" text="22,95 kr" />
-         <Label fx:id="cartBrandLabel" layoutX="108.0" layoutY="65.0" text="Arla">
+         <Label fx:id="cartProductPrice" layoutX="108.0" layoutY="40.0" prefHeight="36.0" prefWidth="92.0" text="22,95 kr">
             <font>
-               <Font size="10.0" />
-            </font>
-         </Label>
-         <Label fx:id="cartOriginLabel" layoutX="148.0" layoutY="65.0" text="Från Sverige">
-            <font>
-               <Font size="10.0" />
-            </font>
-         </Label>
-         <Label fx:id="cartNumberLabel" layoutX="217.0" layoutY="65.0" text="ID-Nummer: 12345">
-            <font>
-               <Font size="10.0" />
-            </font>
-         </Label>
+               <Font size="18.0" />
+            </font></Label>
          <Label fx:id="cartAmountLabel" alignment="CENTER" layoutX="330.0" layoutY="35.0" prefHeight="29.0" prefWidth="53.0" text="1" textAlignment="CENTER">
             <font>
                <Font size="20.0" />

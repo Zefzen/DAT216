@@ -26,12 +26,13 @@
 .Button{
     -fx-background-color:  #e7d5f8;
     -fx-font-size: 30;
+    -fx-background-radius: 40;
 }
 
 .Button2{
     -fx-background-color: #FFFFFF;
     -fx-cursor: pointer;
-
+    -fx-background-radius: 20;
 }
 
 .Button2:hover{
@@ -41,4 +42,5 @@
 
 .Button3{
     -fx-background-color:  #e7d5f8;
+    -fx-background-radius: 30;
 }

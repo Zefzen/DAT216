@@ -46,7 +46,7 @@ public class CartListItem extends AnchorPane {
         this.cartProductImage.setOnMouseClicked(EventHandler -> {mainViewController.populateDetailView(product);});
         this.cartIncrementButton.setOnAction(event -> {increment();});
         this.cartDecrementButton.setOnAction(event -> {decrement(mainViewController);});
-        this.cartProductPrice.setText(String.valueOf(product.getPrice()));
+        this.cartProductPrice.setText((product.getPrice() )+" "+product.getUnit());
 
 
     }

@@ -9,6 +9,7 @@ import java.util.*;
 
 import javafx.collections.ObservableList;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -40,6 +41,7 @@ public class MainViewController implements Initializable {
     @FXML private Accordion category;
     @FXML private ImageView logoImageView;
     @FXML private Button cartButton;
+    @FXML private Label searchResultLabel;
 
     @FXML private Button detailCloseButton;
     @FXML private Button detailIncrementButton;
@@ -59,6 +61,7 @@ public class MainViewController implements Initializable {
     @FXML private Label cartTotalLabel;
     @FXML private Label cartAmountLabel;
     @FXML private Button cartAddresButton;
+    @FXML private Button cartDeleteAllButton;
 
     @FXML private FlowPane receiptListFlowPane;
     @FXML private FlowPane receiptDetailFlowPane;
@@ -122,7 +125,7 @@ public class MainViewController implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
 
-        iMatDataHandler.resetFirstRun();
+
         for (int i = 0; i < 10; i++) {
             cartFlowPane.getChildren().add(new CartListItem(iMatDataHandler.getProducts().getFirst(),
                     iMatDataHandler, this));
@@ -183,7 +186,7 @@ public class MainViewController implements Initializable {
         );
         ObservableList<TitledPane> panes = category.getPanes();
         for (int main = 0; main < 7; main++) {
-            TitledPane pane = panes.get(main + 1);
+            TitledPane pane = panes.get(main + 2);
             int finalMain = main;
             pane.setOnMouseClicked(mouseEvent -> clickMainCategory(finalMain));
             Node content = pane.getContent();
@@ -201,17 +204,27 @@ public class MainViewController implements Initializable {
                 }
             }
         }
-
-        panes.get(0).setOnMouseClicked(EventHandler -> {populateGrid(iMatDataHandler.favorites());});
+        panes.get(0).setOnMouseClicked(EventHandler -> {populateMain();});
+        panes.get(1).setOnMouseClicked(EventHandler -> {populateGrid(iMatDataHandler.favorites());
+        searchResultLabel.setText("");
+        if (iMatDataHandler.favorites().isEmpty()) {
+        searchResultLabel.setText("Du har inga favoriter än\n\nTryck på hjärtat för att lägga till den i favoriter");}});
 
 
         productDetailView.setOnMouseClicked(EventHandler -> {searchView.toFront();});  // Return when clicking on black border
         detailCloseButton.setOnMouseClicked(EventHandler -> {searchView.toFront();});
+
+        cartDeleteAllButton.setOnAction(EventHandler -> {shoppingCart.clear();});
+
+        logoImageView.setOnMouseClicked(EventHandler -> {populateMain();});
     }
 
     public void updateSearchResult() {
         List<Product> searchResult = iMatDataHandler.findProducts(searchBar.getText());
         populateGrid(searchResult);
+        if (searchResult.isEmpty()) {
+            searchResultLabel.setText("Din sökning matchade ingen vara i vårat system");
+            } else {searchResultLabel.setText("");}
         searchView.toFront();
         mainView.toFront();
 
@@ -237,6 +250,7 @@ public class MainViewController implements Initializable {
     }
 
     public void clickMainCategory(int index) {
+        searchResultLabel.setText("");
         List<Product> mainCategory = new ArrayList<>();
         List<String> subCategoryNames = subCategories.get(index);
         for (String name : subCategoryNames) {
@@ -248,6 +262,7 @@ public class MainViewController implements Initializable {
 
 
     public void clickSubCategory(String name) {
+        searchResultLabel.setText("");
         populateGrid(iMatDataHandler.getProducts(ProductCategory.valueOf(name)));
     }
 
@@ -296,6 +311,7 @@ public class MainViewController implements Initializable {
     public void populateMain() {
         searchView.toFront();
         mainView.toFront();
+        searchResultLabel.setText("");
         populateGrid(iMatDataHandler.getProducts());
     }
 
@@ -385,8 +401,12 @@ public class MainViewController implements Initializable {
     }
 
 
-        public void PressDeliveryTime() {
+    public void PressDeliveryTime() {
         saveDeliveryInfo();
+        populateDeliveryTime();
+        }
+    public void PressDeliveryTimeBackwards() {
+        savePayment();
         populateDeliveryTime();
         }
    public void populateDeliveryInfo() {
@@ -472,10 +492,15 @@ public class MainViewController implements Initializable {
     }
 
     public void pressShoppingCart() {
-
         cartView.toFront();
         populateCart();
     }
+
+    public void pressShoppingCartBackwards() {
+        saveDeliveryInfo();
+        cartView.toFront();
+        populateCart();
+        }
 
     public void pressReceipt() {
         receiptView.toFront();
@@ -517,6 +542,7 @@ public class MainViewController implements Initializable {
             this.detailFavoriteImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
             productMap.get(product).setFavorite();
         }
+        iMatDataHandler.shutDown();
     }
 
     @FXML

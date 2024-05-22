@@ -7,18 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="233.0" prefWidth="187.0" stylesheets="@imat_app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="184.0" stylesheets="@imat_app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutY="137.0" prefHeight="96.0" prefWidth="200.0" style="-fx-background-color: #e7d5f8;">
+      <AnchorPane layoutY="137.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="184.0" style="-fx-background-color: #e7d5f8;">
          <children>
-            <Label fx:id="productTitle" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="112.0" text="Label" />
-            <Label fx:id="priceTitle" alignment="CENTER_RIGHT" layoutX="104.0" layoutY="15.0" prefHeight="18.0" prefWidth="88.0" text="90g" />
+            <Label fx:id="productTitle" layoutX="13.0" layoutY="11.0" prefHeight="18.0" prefWidth="112.0" text="Label" />
+            <Label fx:id="priceTitle" alignment="CENTER_RIGHT" layoutX="86.0" layoutY="11.0" prefHeight="18.0" prefWidth="88.0" text="90g" />
             <Button fx:id="decrementButton" layoutX="24.0" layoutY="30.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="39.0" styleClass="Button" text="-" />
-            <Button fx:id="incrementButton" layoutX="116.0" layoutY="29.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="69.0" styleClass="Button" text="+" />
+            <Button fx:id="incrementButton" layoutX="114.0" layoutY="28.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="67.0" styleClass="Button" text="+" />
             <Label fx:id="amountTitle" alignment="CENTER" layoutX="59.0" layoutY="42.0" prefHeight="39.0" prefWidth="82.0" styleClass="medium-text" text="0" />
          </children>
       </AnchorPane>
-      <ImageView fx:id="productImage" fitHeight="137.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="productImage" fitHeight="137.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="favoriteButton" alignment="CENTER" graphicTextGap="0.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="42.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <font>
             <Font size="20.0" />
