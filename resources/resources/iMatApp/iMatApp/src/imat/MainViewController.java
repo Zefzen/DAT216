@@ -92,12 +92,13 @@ public class MainViewController implements Initializable {
     @FXML private Label confirmedOrderNumberLabel;
     @FXML private Label confirmedOrderDeliveryLabel;
 
-    @FXML private CheckBox optionDate1;
-    @FXML private CheckBox optionDate2;
-    @FXML private CheckBox optionDate3;
-    @FXML private CheckBox optionDate4;
-    @FXML private CheckBox optionDate5;
-    @FXML private CheckBox optionDate6;
+    @FXML private ToggleGroup dateToggleGroup;
+    @FXML private RadioButton optionDate1;
+    @FXML private RadioButton optionDate2;
+    @FXML private RadioButton optionDate3;
+    @FXML private RadioButton optionDate4;
+    @FXML private RadioButton optionDate5;
+    @FXML private RadioButton optionDate6;
     private String stringDate1;
     private String stringDate2;
     private String stringDate3;

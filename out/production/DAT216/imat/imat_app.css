@@ -24,7 +24,7 @@
 }
 
 .Button{
-    -fx-background-color:  #ECE6F0;
+    -fx-background-color:  #e7d5f8;
     -fx-font-size: 30;
 }
 
@@ -35,37 +35,10 @@
 }
 
 .Button2:hover{
-    -fx-background-color:  #ECE6F0;
+    -fx-background-color:  #e7d5f8;
 }
 
 
-.TitledPane-text{
-    -fx-font-size: 18;
-    -fx-font-family: "Tahoma";
-    -fx-alignment: center_left;
+.Button3{
+    -fx-background-color:  #e7d5f8;
 }
-
-.medium-text{
-    -fx-font-size: 25;
-}
-
-.TitledPane_collaps{
-    -fx-collapsible: False;
-}
-
-.Button{
-    -fx-background-color:  #ECE6F0;
-    -fx-font-size: 30;
-}
-
-.Button2{
-    -fx-background-color: #FFFFFF;
-    -fx-cursor: pointer;
-
-}
-
-.Button2:hover{
-    -fx-background-color:  #ECE6F0;
-}
-
-

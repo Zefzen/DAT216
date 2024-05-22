@@ -24,7 +24,7 @@
 }
 
 .Button{
-    -fx-background-color:  #ECE6F0;
+    -fx-background-color:  #e7d5f8;
     -fx-font-size: 30;
 }
 
@@ -35,7 +35,10 @@
 }
 
 .Button2:hover{
-    -fx-background-color:  #ECE6F0;
+    -fx-background-color:  #e7d5f8;
 }
 
 
+.Button3{
+    -fx-background-color:  #e7d5f8;
+}
