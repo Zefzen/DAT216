@@ -732,7 +732,7 @@
                      </graphic>
                   </Label>
                   <TextField fx:id="searchBar" layoutX="206.0" layoutY="12.0" onAction="#updateSearchResult" prefHeight="68.0" prefWidth="558.0" promptText="Sök" />
-                  <MenuButton layoutX="781.0" layoutY="20.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="94.0" styleClass="Button3" text="Profil">
+                  <MenuButton alignment="CENTER" layoutX="781.0" layoutY="20.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="94.0" styleClass="Button3" text="Profil" textAlignment="CENTER">
                      <items>
                         <MenuItem mnemonicParsing="false" onAction="#pressReceipt" text="Tidigare köp" />
                         <MenuItem mnemonicParsing="false" onAction="#populateUpdateInfo" text="Uppgifter" />
