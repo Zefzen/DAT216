@@ -52,6 +52,10 @@ public class ProductItem extends AnchorPane {
         this.incrementButton.setOnAction(event -> {increment();});
         this.decrementButton.setOnAction(event -> {decrement();});
         this.favoriteButton.setOnAction(event -> {mainViewController.toggleFavorite(product);});
+        removeFavorite();
+        if (controller.isFavorite(product)) {
+            setFavorite();
+        }
         this.priceTitle.setText(String.valueOf(product.getPrice()) + " " + product.getUnit());
 
     }
